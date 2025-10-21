@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\Joshua Frell Te\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Joshua Frell Te\\.nuget\\packages",
+      "C:\\Users\\NITRO V 15\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\NITRO V 15\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {

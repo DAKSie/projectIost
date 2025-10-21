@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("projectIost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2feb26e429d15aac477d05d41b4a9d5d624e4f79")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+234416506a285f582ccf155e002ae682b3a160db")]
 [assembly: System.Reflection.AssemblyProductAttribute("projectIost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("projectIost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
