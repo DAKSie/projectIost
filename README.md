@@ -289,4 +289,4 @@ projectIost/
 - Test changes before creating a pull request.
 
 
-test branch edit merge
+test del bin folder on repo

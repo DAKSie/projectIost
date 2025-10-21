@@ -52,160 +52,178 @@
             // dgvInventory
             // 
             dgvInventory.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvInventory.Location = new Point(804, 146);
+            dgvInventory.Location = new Point(433, 68);
+            dgvInventory.Margin = new Padding(2, 1, 2, 1);
             dgvInventory.Name = "dgvInventory";
             dgvInventory.RowHeadersWidth = 82;
-            dgvInventory.Size = new Size(1140, 767);
+            dgvInventory.Size = new Size(614, 360);
             dgvInventory.TabIndex = 0;
             // 
             // txtSearch
             // 
-            txtSearch.Location = new Point(905, 82);
+            txtSearch.Location = new Point(487, 38);
+            txtSearch.Margin = new Padding(2, 1, 2, 1);
             txtSearch.Name = "txtSearch";
-            txtSearch.Size = new Size(584, 39);
+            txtSearch.Size = new Size(316, 23);
             txtSearch.TabIndex = 1;
             // 
             // lblInventory
             // 
             lblInventory.AutoSize = true;
             lblInventory.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblInventory.Location = new Point(106, 67);
+            lblInventory.Location = new Point(57, 31);
+            lblInventory.Margin = new Padding(2, 0, 2, 0);
             lblInventory.Name = "lblInventory";
-            lblInventory.Size = new Size(330, 86);
+            lblInventory.Size = new Size(165, 45);
             lblInventory.TabIndex = 2;
             lblInventory.Text = "Inventory";
             lblInventory.Click += label1_Click;
             // 
             // txtID
             // 
-            txtID.Location = new Point(106, 253);
+            txtID.Location = new Point(57, 119);
+            txtID.Margin = new Padding(2, 1, 2, 1);
             txtID.Name = "txtID";
-            txtID.Size = new Size(483, 39);
+            txtID.Size = new Size(262, 23);
             txtID.TabIndex = 3;
             // 
             // txtName
             // 
-            txtName.Location = new Point(106, 401);
+            txtName.Location = new Point(57, 188);
+            txtName.Margin = new Padding(2, 1, 2, 1);
             txtName.Name = "txtName";
-            txtName.Size = new Size(483, 39);
+            txtName.Size = new Size(262, 23);
             txtName.TabIndex = 4;
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(106, 549);
+            txtQuantity.Location = new Point(57, 257);
+            txtQuantity.Margin = new Padding(2, 1, 2, 1);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(483, 39);
+            txtQuantity.Size = new Size(262, 23);
             txtQuantity.TabIndex = 5;
             // 
             // txtCostPrice
             // 
-            txtCostPrice.Location = new Point(106, 697);
+            txtCostPrice.Location = new Point(57, 327);
+            txtCostPrice.Margin = new Padding(2, 1, 2, 1);
             txtCostPrice.Name = "txtCostPrice";
-            txtCostPrice.Size = new Size(483, 39);
+            txtCostPrice.Size = new Size(262, 23);
             txtCostPrice.TabIndex = 6;
             // 
             // txtRetailPrice
             // 
-            txtRetailPrice.Location = new Point(106, 845);
+            txtRetailPrice.Location = new Point(57, 396);
+            txtRetailPrice.Margin = new Padding(2, 1, 2, 1);
             txtRetailPrice.Name = "txtRetailPrice";
-            txtRetailPrice.Size = new Size(483, 39);
+            txtRetailPrice.Size = new Size(262, 23);
             txtRetailPrice.TabIndex = 7;
             // 
             // lblID
             // 
             lblID.AutoSize = true;
-            lblID.Location = new Point(106, 218);
+            lblID.Location = new Point(57, 102);
+            lblID.Margin = new Padding(2, 0, 2, 0);
             lblID.Name = "lblID";
-            lblID.Size = new Size(37, 32);
+            lblID.Size = new Size(18, 15);
             lblID.TabIndex = 8;
             lblID.Text = "ID";
             // 
             // lblName
             // 
             lblName.AutoSize = true;
-            lblName.Location = new Point(106, 366);
+            lblName.Location = new Point(57, 172);
+            lblName.Margin = new Padding(2, 0, 2, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(78, 32);
+            lblName.Size = new Size(39, 15);
             lblName.TabIndex = 9;
             lblName.Text = "Name";
             // 
             // lblQuantity
             // 
             lblQuantity.AutoSize = true;
-            lblQuantity.Location = new Point(106, 514);
+            lblQuantity.Location = new Point(57, 241);
+            lblQuantity.Margin = new Padding(2, 0, 2, 0);
             lblQuantity.Name = "lblQuantity";
-            lblQuantity.Size = new Size(106, 32);
+            lblQuantity.Size = new Size(53, 15);
             lblQuantity.TabIndex = 10;
             lblQuantity.Text = "Quantity";
             // 
             // lblCostPrice
             // 
             lblCostPrice.AutoSize = true;
-            lblCostPrice.Location = new Point(106, 662);
+            lblCostPrice.Location = new Point(57, 310);
+            lblCostPrice.Margin = new Padding(2, 0, 2, 0);
             lblCostPrice.Name = "lblCostPrice";
-            lblCostPrice.Size = new Size(119, 32);
+            lblCostPrice.Size = new Size(60, 15);
             lblCostPrice.TabIndex = 11;
             lblCostPrice.Text = "Cost Price";
             // 
             // lblRetailPrice
             // 
             lblRetailPrice.AutoSize = true;
-            lblRetailPrice.Location = new Point(106, 810);
+            lblRetailPrice.Location = new Point(57, 380);
+            lblRetailPrice.Margin = new Padding(2, 0, 2, 0);
             lblRetailPrice.Name = "lblRetailPrice";
-            lblRetailPrice.Size = new Size(130, 32);
+            lblRetailPrice.Size = new Size(65, 15);
             lblRetailPrice.TabIndex = 12;
             lblRetailPrice.Text = "Retail Price";
             // 
             // lblSearch
             // 
             lblSearch.AutoSize = true;
-            lblSearch.Location = new Point(804, 85);
+            lblSearch.Location = new Point(433, 40);
+            lblSearch.Margin = new Padding(2, 0, 2, 0);
             lblSearch.Name = "lblSearch";
-            lblSearch.Size = new Size(85, 32);
+            lblSearch.Size = new Size(42, 15);
             lblSearch.TabIndex = 13;
             lblSearch.Text = "Search";
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(106, 1003);
+            btnAdd.Location = new Point(57, 470);
+            btnAdd.Margin = new Padding(2, 1, 2, 1);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(408, 120);
+            btnAdd.Size = new Size(220, 56);
             btnAdd.TabIndex = 14;
             btnAdd.Text = "Add";
             btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
-            btnEdit.Location = new Point(585, 1003);
+            btnEdit.Location = new Point(315, 470);
+            btnEdit.Margin = new Padding(2, 1, 2, 1);
             btnEdit.Name = "btnEdit";
-            btnEdit.Size = new Size(408, 120);
+            btnEdit.Size = new Size(220, 56);
             btnEdit.TabIndex = 15;
             btnEdit.Text = "Edit";
             btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnClear
             // 
-            btnClear.Location = new Point(1056, 1003);
+            btnClear.Location = new Point(569, 470);
+            btnClear.Margin = new Padding(2, 1, 2, 1);
             btnClear.Name = "btnClear";
-            btnClear.Size = new Size(408, 120);
+            btnClear.Size = new Size(220, 56);
             btnClear.TabIndex = 16;
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            btnDelete.Location = new Point(1536, 1003);
+            btnDelete.Location = new Point(827, 470);
+            btnDelete.Margin = new Padding(2, 1, 2, 1);
             btnDelete.Name = "btnDelete";
-            btnDelete.Size = new Size(408, 120);
+            btnDelete.Size = new Size(220, 56);
             btnDelete.TabIndex = 17;
             btnDelete.Text = "Delete";
             btnDelete.UseVisualStyleBackColor = true;
             // 
             // InventoryView
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2081, 1201);
+            ClientSize = new Size(1072, 538);
             Controls.Add(btnDelete);
             Controls.Add(btnClear);
             Controls.Add(btnEdit);
@@ -224,6 +242,7 @@
             Controls.Add(lblInventory);
             Controls.Add(txtSearch);
             Controls.Add(dgvInventory);
+            Margin = new Padding(2, 1, 2, 1);
             Name = "InventoryView";
             Text = "InventoryView";
             ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();
