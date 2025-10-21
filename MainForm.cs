@@ -1,3 +1,5 @@
+using projectIost.Views;
+
 namespace projectIost
 {
     public partial class MainForm : Form
@@ -11,7 +13,9 @@ namespace projectIost
 
         private async void btnLoad_Click(object sender, EventArgs e)
         {
+            TabView tabView = new TabView();
             var items = await _controller.GetAllItemsAsync();
+            tabView.Show();
         }
     }
 }
