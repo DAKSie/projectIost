@@ -13,9 +13,9 @@ namespace projectIost
 
         private async void btnLoad_Click(object sender, EventArgs e)
         {
-            TabView tabView = new TabView();
+            InventoryView invView = new InventoryView();
             var items = await _controller.GetAllItemsAsync();
-            tabView.Show();
+            invView.Show();
         }
     }
 }
