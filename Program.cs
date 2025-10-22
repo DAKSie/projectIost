@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using projectIost.Models;
 using projectIost.Data;
 using projectIost.Services;
+using projectIost.Views;
 
 namespace projectIost
 {
@@ -22,16 +23,21 @@ namespace projectIost
             var builder = Host.CreateApplicationBuilder();
             builder.Configuration.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
 
-            //Register DbContext
+            // Register DbContext
             var conn = builder.Configuration.GetConnectionString("DefaultConnection")
                    ?? "Server=127.0.0.1;Database=iostdb;User=root;Password=;";
 
             builder.Services.AddDbContext<IostDbContext>(options =>
                 options.UseMySql(conn, ServerVersion.AutoDetect(conn)));
 
-            //register app services, controllers, forms
+            // Register application services and forms
             builder.Services.AddScoped<IIostService, IostService>();
-            builder.Services.AddScoped<IostController>();
+
+            // Removed legacy controller registration (IostController) — it's not used anymore.
+            // Register InventoryView so it can be constructed by DI and receive IIostService automatically.
+            builder.Services.AddScoped<InventoryView>();
+
+            // MainForm will be resolved by DI
             builder.Services.AddScoped<MainForm>();
 
             var host = builder.Build();
@@ -40,15 +46,11 @@ namespace projectIost
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-
             using (var scope = host.Services.CreateScope())
             {
                 var mainForm = scope.ServiceProvider.GetRequiredService<MainForm>();
                 Application.Run(mainForm);
             }
-            //ApplicationConfiguration.Initialize();
         }
     }
 }

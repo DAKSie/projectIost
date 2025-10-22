@@ -77,7 +77,6 @@
             lblInventory.Size = new Size(208, 54);
             lblInventory.TabIndex = 2;
             lblInventory.Text = "Inventory";
-            lblInventory.Click += label1_Click;
             // 
             // txtID
             // 
