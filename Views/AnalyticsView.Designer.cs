@@ -28,18 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             SuspendLayout();
             // 
             // AnalyticsView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1141, 651);
+            ClientSize = new Size(998, 488);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AnalyticsView";
             Text = "AnalyticsView";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
