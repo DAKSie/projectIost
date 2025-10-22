@@ -6,9 +6,15 @@ namespace projectIost.Services
     public interface IIostService
     {
         Task<List<Item>> GetAllItemsAsync();
+        Task<List<User>> GetAllUsersAsync();
+
         Task AddItemAsync(Item item);
+        Task AddUserAsync(User user);
+
         Task UpdateItemAsync(Item item);
+        Task UpdateUserAsync(User user);
+
         Task DeleteItemAsync(int id);
-        // Add other methods as needed
+        Task DeleteUserAsync(int id);
     }
 }

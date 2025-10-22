@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using projectIost.Data;
 using projectIost.Models;
+using System.Security.Policy;
 
 namespace projectIost.Services
 {
@@ -14,23 +15,51 @@ namespace projectIost.Services
             _context = context;
         }
 
+        // GET ==================
+        //Items
         public async Task<List<Item>> GetAllItemsAsync()
         {
             return await _context.Items.ToListAsync();
         }
+        //Users
+        public async Task<List<User>> GetAllUsersAsync()
+        {
+            return await _context.Users.ToListAsync();
+        }
+        // GET ==================
 
+        // POST ==================
+        // Items
         public async Task AddItemAsync(Item item)
         {
             _context.Items.Add(item);
             await _context.SaveChangesAsync();
         }
+        //Users
+        public async Task AddUserAsync(User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+        }
+        // POST ==================
 
+        // PUT ==================
+        //Items
         public async Task UpdateItemAsync(Item item)
         {
             _context.Items.Update(item);
             await _context.SaveChangesAsync();
         }
+        //Users
+        public async Task UpdateUserAsync(User user)
+        {
+            _context.Users.Update(user);
+            await _context.SaveChangesAsync();
+        }
+        // PUT ==================
 
+        // DELETE ==================
+        //Items
         public async Task DeleteItemAsync(int id)
         {
             var item = await _context.Items.FindAsync(id);
@@ -40,5 +69,16 @@ namespace projectIost.Services
                 await _context.SaveChangesAsync();
             }
         }
+        //Users
+        public async Task DeleteUserAsync(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            if (user != null)
+            {
+                _context.Users.Remove(user);
+                await _context.SaveChangesAsync();
+            }
+        }
+        // DELETE ==================
     }
 }

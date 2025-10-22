@@ -11,6 +11,7 @@ public class IostController
 
     public async Task<List<Item>> GetAllItemsAsync() => await _db.Items.ToListAsync();
 
+    // ITEMS ===========================================
     public async Task AddItemAsync(Item i)
     {
         _db.Items.Add(i);
@@ -28,4 +29,5 @@ public class IostController
         var item = await _db.Items.FindAsync(id);
         if (item != null) { _db.Items.Remove(item); await _db.SaveChangesAsync(); }
     }
+    // ITEMS ===========================================
 }
