@@ -49,7 +49,7 @@
             txtPassword.Location = new Point(65, 167);
             txtPassword.Margin = new Padding(3, 2, 3, 2);
             txtPassword.Name = "txtPassword";
-            txtPassword.PasswordChar = '1';
+            txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
             txtPassword.Size = new Size(210, 23);
             txtPassword.TabIndex = 1;
