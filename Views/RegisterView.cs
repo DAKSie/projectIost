@@ -10,23 +10,14 @@ using System.Windows.Forms;
 
 namespace projectIost.Views
 {
-    public partial class AnalyticsView : Form
+    public partial class RegisterView : Form
     {
-        public AnalyticsView()
+        public RegisterView()
         {
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void guna2ImageButton2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -28,342 +28,516 @@
         /// </summary>
         private void InitializeComponent()
         {
-            splitContainer1 = new SplitContainer();
-            splitContainer2 = new SplitContainer();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SupplyView));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            label9 = new Label();
+            label10 = new Label();
+            label11 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            textBox3 = new TextBox();
+            label3 = new Label();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            dataGridView3 = new DataGridView();
+            dataGridView1 = new DataGridView();
+            dataGridView2 = new DataGridView();
+            guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            button5 = new Button();
             button4 = new Button();
             button3 = new Button();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
             button2 = new Button();
             button1 = new Button();
-            textBox3 = new TextBox();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            panel2 = new Panel();
             label1 = new Label();
-            button5 = new Button();
-            textBox4 = new TextBox();
-            dataGridView1 = new DataGridView();
-            splitContainer3 = new SplitContainer();
-            label5 = new Label();
-            textBox5 = new TextBox();
-            dataGridView2 = new DataGridView();
-            label6 = new Label();
-            textBox6 = new TextBox();
-            dataGridView3 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
-            splitContainer2.Panel1.SuspendLayout();
-            splitContainer2.Panel2.SuspendLayout();
-            splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
-            splitContainer3.Panel1.SuspendLayout();
-            splitContainer3.Panel2.SuspendLayout();
-            splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            label2 = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            panel2.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
-            // splitContainer1
+            // label9
             // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Name = "splitContainer1";
-            splitContainer1.Orientation = Orientation.Horizontal;
+            label9.AutoSize = true;
+            label9.BackColor = Color.Transparent;
+            label9.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label9.Location = new Point(903, 825);
+            label9.Name = "label9";
+            label9.Size = new Size(109, 21);
+            label9.TabIndex = 55;
+            label9.Text = "placeholder";
             // 
-            // splitContainer1.Panel1
+            // label10
             // 
-            splitContainer1.Panel1.Controls.Add(splitContainer2);
+            label10.BackColor = Color.Black;
+            label10.Location = new Point(838, 850);
+            label10.Name = "label10";
+            label10.Size = new Size(416, 1);
+            label10.TabIndex = 54;
             // 
-            // splitContainer1.Panel2
+            // label11
             // 
-            splitContainer1.Panel2.Controls.Add(splitContainer3);
-            splitContainer1.Panel2.Paint += splitContainer1_Panel2_Paint;
-            splitContainer1.Size = new Size(1214, 841);
-            splitContainer1.SplitterDistance = 434;
-            splitContainer1.TabIndex = 0;
-            splitContainer1.SplitterMoved += splitContainer1_SplitterMoved_1;
+            label11.AutoSize = true;
+            label11.BackColor = Color.Transparent;
+            label11.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label11.Location = new Point(834, 825);
+            label11.Name = "label11";
+            label11.Size = new Size(63, 21);
+            label11.TabIndex = 53;
+            label11.Text = "TOTAL:";
             // 
-            // splitContainer2
+            // label8
             // 
-            splitContainer2.Dock = DockStyle.Fill;
-            splitContainer2.Location = new Point(0, 0);
-            splitContainer2.Name = "splitContainer2";
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(395, 824);
+            label8.Name = "label8";
+            label8.Size = new Size(109, 21);
+            label8.TabIndex = 52;
+            label8.Text = "placeholder";
             // 
-            // splitContainer2.Panel1
+            // label7
             // 
-            splitContainer2.Panel1.Controls.Add(button4);
-            splitContainer2.Panel1.Controls.Add(button3);
-            splitContainer2.Panel1.Controls.Add(label4);
-            splitContainer2.Panel1.Controls.Add(label3);
-            splitContainer2.Panel1.Controls.Add(label2);
-            splitContainer2.Panel1.Controls.Add(button2);
-            splitContainer2.Panel1.Controls.Add(button1);
-            splitContainer2.Panel1.Controls.Add(textBox3);
-            splitContainer2.Panel1.Controls.Add(textBox1);
-            splitContainer2.Panel1.Controls.Add(textBox2);
-            // 
-            // splitContainer2.Panel2
-            // 
-            splitContainer2.Panel2.Controls.Add(label1);
-            splitContainer2.Panel2.Controls.Add(button5);
-            splitContainer2.Panel2.Controls.Add(textBox4);
-            splitContainer2.Panel2.Controls.Add(dataGridView1);
-            splitContainer2.Size = new Size(1214, 434);
-            splitContainer2.SplitterDistance = 608;
-            splitContainer2.TabIndex = 0;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(324, 330);
-            button4.Name = "button4";
-            button4.Size = new Size(117, 44);
-            button4.TabIndex = 14;
-            button4.Text = "Delete Supply";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(177, 330);
-            button3.Name = "button3";
-            button3.Size = new Size(117, 44);
-            button3.TabIndex = 13;
-            button3.Text = "Clear Fields";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(200, 167);
-            label4.Name = "label4";
-            label4.Size = new Size(72, 20);
-            label4.TabIndex = 12;
-            label4.Text = "Customer";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(200, 102);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 20);
-            label3.TabIndex = 11;
-            label3.Text = "Date";
-            label3.Click += label3_Click;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(200, 38);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 20);
-            label2.TabIndex = 10;
-            label2.Text = "Supply ID";
-            // 
-            // button2
-            // 
-            button2.Location = new Point(324, 253);
-            button2.Name = "button2";
-            button2.Size = new Size(117, 44);
-            button2.TabIndex = 5;
-            button2.Text = "Edit Supply";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            button1.Location = new Point(177, 253);
-            button1.Name = "button1";
-            button1.Size = new Size(117, 44);
-            button1.TabIndex = 4;
-            button1.Text = "Add Supply";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(200, 190);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(218, 27);
-            textBox3.TabIndex = 3;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(200, 125);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(218, 27);
-            textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(200, 61);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(218, 27);
-            textBox2.TabIndex = 1;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(210, 395);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 20);
-            label1.TabIndex = 9;
-            label1.Text = "Quantity";
-            // 
-            // button5
-            // 
-            button5.Location = new Point(496, 390);
-            button5.Name = "button5";
-            button5.Size = new Size(84, 30);
-            button5.TabIndex = 8;
-            button5.Text = "Add Item";
-            button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(281, 392);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(197, 27);
-            textBox4.TabIndex = 8;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(14, 20);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(576, 365);
-            dataGridView1.TabIndex = 0;
-            // 
-            // splitContainer3
-            // 
-            splitContainer3.Dock = DockStyle.Fill;
-            splitContainer3.Location = new Point(0, 0);
-            splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            splitContainer3.Panel1.Controls.Add(label5);
-            splitContainer3.Panel1.Controls.Add(textBox5);
-            splitContainer3.Panel1.Controls.Add(dataGridView2);
-            // 
-            // splitContainer3.Panel2
-            // 
-            splitContainer3.Panel2.Controls.Add(label6);
-            splitContainer3.Panel2.Controls.Add(textBox6);
-            splitContainer3.Panel2.Controls.Add(dataGridView3);
-            splitContainer3.Size = new Size(1214, 403);
-            splitContainer3.SplitterDistance = 608;
-            splitContainer3.TabIndex = 0;
-            splitContainer3.SplitterMoved += splitContainer3_SplitterMoved_1;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(315, 367);
-            label5.Name = "label5";
-            label5.Size = new Size(75, 20);
-            label5.TabIndex = 10;
-            label5.Text = "Total Cost";
-            // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(396, 364);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(197, 27);
-            textBox5.TabIndex = 10;
-            // 
-            // dataGridView2
-            // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 17);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(581, 341);
-            dataGridView2.TabIndex = 10;
+            label7.BackColor = Color.Black;
+            label7.Location = new Point(278, 849);
+            label7.Name = "label7";
+            label7.Size = new Size(416, 1);
+            label7.TabIndex = 51;
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(348, 367);
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label6.Location = new Point(274, 824);
             label6.Name = "label6";
-            label6.Size = new Size(42, 20);
-            label6.TabIndex = 11;
-            label6.Text = "Total";
+            label6.Size = new Size(111, 21);
+            label6.TabIndex = 50;
+            label6.Text = "TOTAL COST:";
             // 
-            // textBox6
+            // guna2Button5
             // 
-            textBox6.Location = new Point(396, 363);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(197, 27);
-            textBox6.TabIndex = 11;
+            guna2Button5.BorderRadius = 13;
+            guna2Button5.CustomizableEdges = customizableEdges1;
+            guna2Button5.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button5.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button5.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button5.FillColor = Color.FromArgb(252, 191, 73);
+            guna2Button5.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button5.ForeColor = Color.White;
+            guna2Button5.Location = new Point(420, 307);
+            guna2Button5.Name = "guna2Button5";
+            guna2Button5.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button5.Size = new Size(104, 34);
+            guna2Button5.TabIndex = 49;
+            guna2Button5.Text = "EDIT ITEM";
+            // 
+            // guna2Button4
+            // 
+            guna2Button4.BorderRadius = 13;
+            guna2Button4.CustomizableEdges = customizableEdges3;
+            guna2Button4.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button4.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button4.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button4.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button4.FillColor = Color.FromArgb(51, 153, 255);
+            guna2Button4.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button4.ForeColor = Color.White;
+            guna2Button4.Location = new Point(258, 377);
+            guna2Button4.Name = "guna2Button4";
+            guna2Button4.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button4.Size = new Size(104, 34);
+            guna2Button4.TabIndex = 48;
+            guna2Button4.Text = "CLEAR";
+            // 
+            // guna2Button3
+            // 
+            guna2Button3.BorderRadius = 13;
+            guna2Button3.CustomizableEdges = customizableEdges5;
+            guna2Button3.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button3.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button3.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button3.FillColor = Color.FromArgb(214, 40, 40);
+            guna2Button3.Font = new Font("Century Gothic", 7F, FontStyle.Bold);
+            guna2Button3.ForeColor = Color.White;
+            guna2Button3.Location = new Point(420, 377);
+            guna2Button3.Name = "guna2Button3";
+            guna2Button3.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2Button3.Size = new Size(104, 34);
+            guna2Button3.TabIndex = 47;
+            guna2Button3.Text = "DELETE ITEM";
+            // 
+            // guna2Button2
+            // 
+            guna2Button2.BackColor = Color.Transparent;
+            guna2Button2.BorderRadius = 13;
+            guna2Button2.CustomizableEdges = customizableEdges7;
+            guna2Button2.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button2.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button2.FillColor = Color.FromArgb(4, 170, 109);
+            guna2Button2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button2.ForeColor = Color.White;
+            guna2Button2.Location = new Point(258, 307);
+            guna2Button2.Name = "guna2Button2";
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna2Button2.Size = new Size(104, 34);
+            guna2Button2.TabIndex = 46;
+            guna2Button2.Text = "ADD ITEM";
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.BorderRadius = 13;
+            guna2Button1.CustomizableEdges = customizableEdges9;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.FillColor = Color.FromArgb(0, 48, 73);
+            guna2Button1.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(1125, 441);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna2Button1.Size = new Size(104, 34);
+            guna2Button1.TabIndex = 45;
+            guna2Button1.Text = "ADD ITEM";
+            // 
+            // guna2TextBox1
+            // 
+            guna2TextBox1.BorderRadius = 13;
+            guna2TextBox1.CustomizableEdges = customizableEdges11;
+            guna2TextBox1.DefaultText = "Quantity";
+            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            guna2TextBox1.Location = new Point(769, 443);
+            guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
+            guna2TextBox1.Name = "guna2TextBox1";
+            guna2TextBox1.PlaceholderText = "";
+            guna2TextBox1.SelectedText = "";
+            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            guna2TextBox1.Size = new Size(350, 30);
+            guna2TextBox1.TabIndex = 44;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.FromArgb(214, 40, 40);
+            label5.Location = new Point(171, 265);
+            label5.Name = "label5";
+            label5.Size = new Size(0, 0);
+            label5.TabIndex = 43;
+            // 
+            // label4
+            // 
+            label4.BackColor = Color.Black;
+            label4.Location = new Point(237, 270);
+            label4.Name = "label4";
+            label4.Size = new Size(304, 1);
+            label4.TabIndex = 42;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = SystemColors.Control;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Century Gothic", 10F, FontStyle.Italic);
+            textBox3.ForeColor = Color.DimGray;
+            textBox3.Location = new Point(237, 245);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(304, 21);
+            textBox3.TabIndex = 41;
+            textBox3.Text = "Supplier Name";
+            // 
+            // label3
+            // 
+            label3.BackColor = Color.Black;
+            label3.Location = new Point(237, 213);
+            label3.Name = "label3";
+            label3.Size = new Size(304, 1);
+            label3.TabIndex = 40;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.Control;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Century Gothic", 10F, FontStyle.Italic);
+            textBox2.ForeColor = Color.DimGray;
+            textBox2.Location = new Point(237, 188);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(304, 21);
+            textBox2.TabIndex = 39;
+            textBox2.Text = "Date";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = SystemColors.Control;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Century Gothic", 10F, FontStyle.Italic);
+            textBox1.ForeColor = Color.DimGray;
+            textBox1.Location = new Point(237, 127);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(304, 21);
+            textBox1.TabIndex = 37;
+            textBox1.Text = "Supply ID";
             // 
             // dataGridView3
             // 
             dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(14, 17);
+            dataGridView3.Location = new Point(760, 514);
             dataGridView3.Name = "dataGridView3";
             dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(576, 341);
-            dataGridView3.TabIndex = 11;
+            dataGridView3.Size = new Size(561, 293);
+            dataGridView3.TabIndex = 36;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(197, 514);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(557, 293);
+            dataGridView1.TabIndex = 35;
+            // 
+            // dataGridView2
+            // 
+            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView2.Location = new Point(654, 95);
+            dataGridView2.Name = "dataGridView2";
+            dataGridView2.RowHeadersWidth = 51;
+            dataGridView2.Size = new Size(667, 340);
+            dataGridView2.TabIndex = 34;
+            // 
+            // guna2ImageButton1
+            // 
+            guna2ImageButton1.BackColor = Color.FromArgb(64, 64, 64);
+            guna2ImageButton1.CheckedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.HoverState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.Image = (Image)resources.GetObject("guna2ImageButton1.Image");
+            guna2ImageButton1.ImageOffset = new Point(0, 0);
+            guna2ImageButton1.ImageRotate = 0F;
+            guna2ImageButton1.ImageSize = new Size(32, 32);
+            guna2ImageButton1.Location = new Point(78, 917);
+            guna2ImageButton1.Name = "guna2ImageButton1";
+            guna2ImageButton1.PressedState.ImageSize = new Size(64, 64);
+            guna2ImageButton1.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2ImageButton1.Size = new Size(56, 56);
+            guna2ImageButton1.TabIndex = 2;
+            // 
+            // button5
+            // 
+            button5.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Century Gothic", 12F);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(14, 962);
+            button5.Name = "button5";
+            button5.Size = new Size(178, 51);
+            button5.TabIndex = 6;
+            button5.Text = "Log-out";
+            button5.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.FromArgb(64, 64, 64);
+            button4.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Century Gothic", 12F);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(15, 309);
+            button4.Name = "button4";
+            button4.Size = new Size(178, 51);
+            button4.TabIndex = 5;
+            button4.Text = "Order";
+            button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            button3.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Century Gothic", 12F);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(15, 421);
+            button3.Name = "button3";
+            button3.Size = new Size(178, 51);
+            button3.TabIndex = 4;
+            button3.Text = "Analytics";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.BackColor = Color.DimGray;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 12F);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(15, 198);
+            button2.Name = "button2";
+            button2.Size = new Size(178, 51);
+            button2.TabIndex = 3;
+            button2.Text = "Supply";
+            button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderColor = Color.FromArgb(64, 64, 64);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Century Gothic", 12F);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(15, 86);
+            button1.Name = "button1";
+            button1.Size = new Size(178, 51);
+            button1.TabIndex = 2;
+            button1.Text = "Inventory";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(64, 64, 64);
+            panel2.Controls.Add(guna2ImageButton1);
+            panel2.Controls.Add(button5);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button1);
+            panel2.Location = new Point(-16, -8);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(188, 1033);
+            panel2.TabIndex = 33;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(31, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(192, 40);
+            label1.TabIndex = 0;
+            label1.Text = "projectIost";
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.Black;
+            label2.Location = new Point(237, 152);
+            label2.Name = "label2";
+            label2.Size = new Size(304, 1);
+            label2.TabIndex = 38;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(214, 40, 40);
+            panel1.Controls.Add(label1);
+            panel1.Location = new Point(171, -8);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1161, 73);
+            panel1.TabIndex = 32;
             // 
             // SupplyView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1214, 841);
-            Controls.Add(splitContainer1);
+            ClientSize = new Size(1331, 1019);
+            Controls.Add(label9);
+            Controls.Add(label10);
+            Controls.Add(label11);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(guna2Button5);
+            Controls.Add(guna2Button4);
+            Controls.Add(guna2Button3);
+            Controls.Add(guna2Button2);
+            Controls.Add(guna2Button1);
+            Controls.Add(guna2TextBox1);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(textBox3);
+            Controls.Add(label3);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            Controls.Add(dataGridView3);
+            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView2);
+            Controls.Add(panel2);
+            Controls.Add(label2);
+            Controls.Add(panel1);
             Margin = new Padding(2);
             Name = "SupplyView";
             Text = "SupplyView";
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
-            splitContainer2.Panel1.ResumeLayout(false);
-            splitContainer2.Panel1.PerformLayout();
-            splitContainer2.Panel2.ResumeLayout(false);
-            splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
-            splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            splitContainer3.Panel1.ResumeLayout(false);
-            splitContainer3.Panel1.PerformLayout();
-            splitContainer3.Panel2.ResumeLayout(false);
-            splitContainer3.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
-            splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            panel2.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private SplitContainer splitContainer1;
-        private SplitContainer splitContainer2;
-        private SplitContainer splitContainer3;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox3;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private Label label1;
-        private Button button5;
-        private TextBox textBox4;
-        private DataGridView dataGridView1;
+        private Label label9;
+        private Label label10;
+        private Label label11;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Label label5;
         private Label label4;
+        private TextBox textBox3;
         private Label label3;
-        private Label label2;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private DataGridView dataGridView3;
+        private DataGridView dataGridView1;
+        private DataGridView dataGridView2;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Button button5;
         private Button button4;
         private Button button3;
-        private Label label5;
-        private TextBox textBox5;
-        private DataGridView dataGridView2;
-        private Label label6;
-        private TextBox textBox6;
-        private DataGridView dataGridView3;
+        private Button button2;
+        private Button button1;
+        private Panel panel2;
+        private Label label1;
+        private Label label2;
+        private Panel panel1;
     }
 }

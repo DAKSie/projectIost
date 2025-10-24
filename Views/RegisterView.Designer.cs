@@ -1,6 +1,6 @@
 ﻿namespace projectIost.Views
 {
-    partial class LoginView
+    partial class RegisterView
     {
         /// <summary>
         /// Required designer variable.
@@ -38,9 +38,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             label1 = new Label();
+            label2 = new Label();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             linkLabel1 = new LinkLabel();
             guna2GradientPanel1.SuspendLayout();
@@ -52,19 +52,20 @@
             guna2GradientPanel1.BorderColor = Color.FromArgb(0, 48, 73);
             guna2GradientPanel1.Controls.Add(linkLabel1);
             guna2GradientPanel1.Controls.Add(guna2Button1);
-            guna2GradientPanel1.Controls.Add(label2);
             guna2GradientPanel1.Controls.Add(guna2TextBox2);
             guna2GradientPanel1.Controls.Add(guna2TextBox1);
+            guna2GradientPanel1.Controls.Add(label2);
             guna2GradientPanel1.Controls.Add(label1);
             guna2GradientPanel1.CustomBorderColor = Color.FromArgb(0, 48, 73);
             guna2GradientPanel1.CustomizableEdges = customizableEdges7;
             guna2GradientPanel1.FillColor = Color.FromArgb(0, 48, 73);
             guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            guna2GradientPanel1.Location = new Point(-3, -1);
+            guna2GradientPanel1.Location = new Point(0, 1);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2GradientPanel1.Size = new Size(729, 705);
-            guna2GradientPanel1.TabIndex = 5;
+            guna2GradientPanel1.Size = new Size(538, 727);
+            guna2GradientPanel1.TabIndex = 6;
+            guna2GradientPanel1.Paint += guna2GradientPanel1_Paint;
             // 
             // label1
             // 
@@ -72,11 +73,20 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(33, 165);
+            label1.Location = new Point(140, 69);
             label1.Name = "label1";
-            label1.Size = new Size(219, 47);
+            label1.Size = new Size(152, 47);
             label1.TabIndex = 0;
-            label1.Text = "Welcome!";
+            label1.Text = "Sign-in";
+            // 
+            // label2
+            // 
+            label2.BackColor = Color.Gainsboro;
+            label2.FlatStyle = FlatStyle.Flat;
+            label2.Location = new Point(23, 167);
+            label2.Name = "label2";
+            label2.Size = new Size(391, 1);
+            label2.TabIndex = 7;
             // 
             // guna2TextBox1
             // 
@@ -93,15 +103,14 @@
             guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox1.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(352, 135);
+            guna2TextBox1.Location = new Point(53, 232);
             guna2TextBox1.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PlaceholderText = "";
             guna2TextBox1.SelectedText = "";
             guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna2TextBox1.Size = new Size(345, 32);
-            guna2TextBox1.TabIndex = 4;
-            guna2TextBox1.TextChanged += guna2TextBox1_TextChanged;
+            guna2TextBox1.TabIndex = 8;
             // 
             // guna2TextBox2
             // 
@@ -118,23 +127,14 @@
             guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             guna2TextBox2.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             guna2TextBox2.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox2.Location = new Point(352, 196);
+            guna2TextBox2.Location = new Point(53, 315);
             guna2TextBox2.Margin = new Padding(3, 4, 3, 4);
             guna2TextBox2.Name = "guna2TextBox2";
             guna2TextBox2.PlaceholderText = "";
             guna2TextBox2.SelectedText = "";
             guna2TextBox2.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2TextBox2.Size = new Size(345, 32);
-            guna2TextBox2.TabIndex = 5;
-            // 
-            // label2
-            // 
-            label2.BackColor = Color.Gainsboro;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Location = new Point(284, 19);
-            label2.Name = "label2";
-            label2.Size = new Size(1, 378);
-            label2.TabIndex = 6;
+            guna2TextBox2.TabIndex = 9;
             // 
             // guna2Button1
             // 
@@ -150,49 +150,48 @@
             guna2Button1.FillColor = Color.Transparent;
             guna2Button1.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2Button1.ForeColor = Color.White;
-            guna2Button1.Location = new Point(436, 262);
+            guna2Button1.Location = new Point(136, 416);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button1.Size = new Size(166, 44);
-            guna2Button1.TabIndex = 7;
-            guna2Button1.Text = "Login";
+            guna2Button1.TabIndex = 10;
+            guna2Button1.Text = "Sign-up";
             // 
             // linkLabel1
             // 
-            linkLabel1.ActiveLinkColor = Color.Gray;
+            linkLabel1.ActiveLinkColor = Color.White;
             linkLabel1.AutoSize = true;
             linkLabel1.BackColor = Color.Transparent;
             linkLabel1.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             linkLabel1.LinkColor = Color.White;
-            linkLabel1.Location = new Point(374, 351);
+            linkLabel1.Location = new Point(77, 499);
             linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(283, 18);
-            linkLabel1.TabIndex = 8;
+            linkLabel1.Size = new Size(290, 18);
+            linkLabel1.TabIndex = 11;
             linkLabel1.TabStop = true;
-            linkLabel1.Text = "Don't have an account? Sign up here.";
+            linkLabel1.Text = "Already have an account? Login here.";
             // 
-            // LoginView
+            // RegisterView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(725, 416);
+            ClientSize = new Size(433, 579);
             Controls.Add(guna2GradientPanel1);
-            Margin = new Padding(2);
-            Name = "LoginView";
-            Text = "LoginView";
+            Name = "RegisterView";
+            Text = "RegisterView";
             guna2GradientPanel1.ResumeLayout(false);
             guna2GradientPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
+
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private LinkLabel linkLabel1;
     }
 }

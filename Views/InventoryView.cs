@@ -26,5 +26,25 @@ namespace projectIost.Views
         {
 
         }
+
+        private void lblSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InventoryView_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
