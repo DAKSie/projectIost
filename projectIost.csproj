@@ -9,7 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include=".depreciated\Controller\IostController.cs" />
+    <Compile Remove=".depreciated\**" />
+    <EmbeddedResource Remove=".depreciated\**" />
+    <None Remove=".depreciated\**" />
   </ItemGroup>
 
   <ItemGroup>
