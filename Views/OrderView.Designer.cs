@@ -28,340 +28,562 @@
         /// </summary>
         private void InitializeComponent()
         {
-            splitContainer1 = new SplitContainer();
-            splitContainer2 = new SplitContainer();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderView));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            panel2 = new Panel();
+            guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            btnLogout2 = new Guna.UI2.WinForms.Guna2ImageButton();
             label1 = new Label();
-            label4 = new Label();
-            textBox4 = new TextBox();
-            button5 = new Button();
-            dataGridView1 = new DataGridView();
-            splitContainer3 = new SplitContainer();
-            label5 = new Label();
-            textBox5 = new TextBox();
-            dataGridView2 = new DataGridView();
-            label6 = new Label();
-            textBox6 = new TextBox();
-            dataGridView3 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
-            splitContainer1.Panel1.SuspendLayout();
-            splitContainer1.Panel2.SuspendLayout();
-            splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
-            splitContainer2.Panel1.SuspendLayout();
-            splitContainer2.Panel2.SuspendLayout();
-            splitContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).BeginInit();
-            splitContainer3.Panel1.SuspendLayout();
-            splitContainer3.Panel2.SuspendLayout();
-            splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            label9 = new Label();
+            btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            btnAnalytics = new Guna.UI2.WinForms.Guna2Button();
+            btnOrder = new Guna.UI2.WinForms.Guna2Button();
+            btnSupply = new Guna.UI2.WinForms.Guna2Button();
+            btnInventory = new Guna.UI2.WinForms.Guna2Button();
+            guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label2 = new Label();
+            btnExitOrder = new Guna.UI2.WinForms.Guna2ImageButton();
+            label3 = new Label();
+            btnAddItem = new Guna.UI2.WinForms.Guna2Button();
+            txtSearchSupply = new Guna.UI2.WinForms.Guna2TextBox();
+            dgvOrder3 = new DataGridView();
+            dgvOrder2 = new DataGridView();
+            dgvOrder1 = new DataGridView();
+            btnAddSupply = new Guna.UI2.WinForms.Guna2Button();
+            btnClearSupply = new Guna.UI2.WinForms.Guna2Button();
+            btnEditSupply = new Guna.UI2.WinForms.Guna2Button();
+            btnDelSupply = new Guna.UI2.WinForms.Guna2Button();
+            txtCustomerName = new Guna.UI2.WinForms.Guna2TextBox();
+            txtOrderDate = new Guna.UI2.WinForms.Guna2TextBox();
+            txtOrderID = new Guna.UI2.WinForms.Guna2TextBox();
+            guna2GradientPanel3.SuspendLayout();
+            guna2GradientPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder1).BeginInit();
             SuspendLayout();
             // 
-            // splitContainer1
+            // panel2
             // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 0);
-            splitContainer1.Name = "splitContainer1";
-            splitContainer1.Orientation = Orientation.Horizontal;
+            panel2.ForeColor = Color.Transparent;
+            panel2.Location = new Point(185, -5);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(10, 750);
+            panel2.TabIndex = 0;
             // 
-            // splitContainer1.Panel1
+            // guna2GradientPanel3
             // 
-            splitContainer1.Panel1.Controls.Add(splitContainer2);
+            guna2GradientPanel3.BackColor = Color.Transparent;
+            guna2GradientPanel3.BorderRadius = 13;
+            guna2GradientPanel3.Controls.Add(btnLogout2);
+            guna2GradientPanel3.Controls.Add(label1);
+            guna2GradientPanel3.Controls.Add(label9);
+            guna2GradientPanel3.Controls.Add(btnLogout);
+            guna2GradientPanel3.Controls.Add(panel2);
+            guna2GradientPanel3.Controls.Add(btnAnalytics);
+            guna2GradientPanel3.Controls.Add(btnOrder);
+            guna2GradientPanel3.Controls.Add(btnSupply);
+            guna2GradientPanel3.Controls.Add(btnInventory);
+            guna2GradientPanel3.CustomizableEdges = customizableEdges46;
+            guna2GradientPanel3.FillColor = Color.FromArgb(0, 48, 73);
+            guna2GradientPanel3.FillColor2 = Color.FromArgb(214, 40, 40);
+            guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            guna2GradientPanel3.Location = new Point(1, 0);
+            guna2GradientPanel3.Name = "guna2GradientPanel3";
+            guna2GradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges47;
+            guna2GradientPanel3.Size = new Size(188, 750);
+            guna2GradientPanel3.TabIndex = 5;
             // 
-            // splitContainer1.Panel2
+            // btnLogout2
             // 
-            splitContainer1.Panel2.Controls.Add(splitContainer3);
-            splitContainer1.Size = new Size(1259, 809);
-            splitContainer1.SplitterDistance = 412;
-            splitContainer1.TabIndex = 0;
-            splitContainer1.SplitterMoved += splitContainer1_SplitterMoved;
+            btnLogout2.CheckedState.ImageSize = new Size(64, 64);
+            btnLogout2.HoverState.ImageSize = new Size(64, 64);
+            btnLogout2.Image = (Image)resources.GetObject("btnLogout2.Image");
+            btnLogout2.ImageOffset = new Point(0, 0);
+            btnLogout2.ImageRotate = 0F;
+            btnLogout2.ImageSize = new Size(30, 30);
+            btnLogout2.Location = new Point(79, 644);
+            btnLogout2.Name = "btnLogout2";
+            btnLogout2.PressedState.ImageSize = new Size(64, 64);
+            btnLogout2.ShadowDecoration.CustomizableEdges = customizableEdges35;
+            btnLogout2.Size = new Size(29, 30);
+            btnLogout2.TabIndex = 44;
             // 
-            // splitContainer2
+            // label1
             // 
-            splitContainer2.Dock = DockStyle.Fill;
-            splitContainer2.Location = new Point(0, 0);
-            splitContainer2.Name = "splitContainer2";
+            label1.BackColor = SystemColors.ButtonFace;
+            label1.ForeColor = SystemColors.ButtonFace;
+            label1.Location = new Point(1, 305);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 1);
+            label1.TabIndex = 40;
             // 
-            // splitContainer2.Panel1
+            // label9
             // 
-            splitContainer2.Panel1.Controls.Add(button4);
-            splitContainer2.Panel1.Controls.Add(button3);
-            splitContainer2.Panel1.Controls.Add(button2);
-            splitContainer2.Panel1.Controls.Add(button1);
-            splitContainer2.Panel1.Controls.Add(textBox3);
-            splitContainer2.Panel1.Controls.Add(textBox2);
-            splitContainer2.Panel1.Controls.Add(textBox1);
-            splitContainer2.Panel1.Controls.Add(label3);
-            splitContainer2.Panel1.Controls.Add(label2);
-            splitContainer2.Panel1.Controls.Add(label1);
+            label9.BackColor = SystemColors.ButtonFace;
+            label9.ForeColor = SystemColors.ButtonFace;
+            label9.Location = new Point(2, 360);
+            label9.Name = "label9";
+            label9.Size = new Size(184, 1);
+            label9.TabIndex = 39;
             // 
-            // splitContainer2.Panel2
+            // btnLogout
             // 
-            splitContainer2.Panel2.Controls.Add(label4);
-            splitContainer2.Panel2.Controls.Add(textBox4);
-            splitContainer2.Panel2.Controls.Add(button5);
-            splitContainer2.Panel2.Controls.Add(dataGridView1);
-            splitContainer2.Size = new Size(1259, 412);
-            splitContainer2.SplitterDistance = 629;
-            splitContainer2.TabIndex = 0;
+            btnLogout.CustomizableEdges = customizableEdges36;
+            btnLogout.DisabledState.BorderColor = Color.DarkGray;
+            btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogout.FillColor = Color.Transparent;
+            btnLogout.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogout.ForeColor = Color.White;
+            btnLogout.Location = new Point(0, 680);
+            btnLogout.Name = "btnLogout";
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges37;
+            btnLogout.Size = new Size(185, 47);
+            btnLogout.TabIndex = 38;
+            btnLogout.Text = "LOG-OUT";
             // 
-            // button4
+            // btnAnalytics
             // 
-            button4.Location = new Point(194, 322);
-            button4.Name = "button4";
-            button4.Size = new Size(108, 41);
-            button4.TabIndex = 9;
-            button4.Text = "Delete Order";
-            button4.UseVisualStyleBackColor = true;
+            btnAnalytics.CustomizableEdges = customizableEdges38;
+            btnAnalytics.DisabledState.BorderColor = Color.DarkGray;
+            btnAnalytics.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAnalytics.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAnalytics.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAnalytics.FillColor = Color.Transparent;
+            btnAnalytics.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAnalytics.ForeColor = Color.White;
+            btnAnalytics.Location = new Point(0, 409);
+            btnAnalytics.Name = "btnAnalytics";
+            btnAnalytics.ShadowDecoration.CustomizableEdges = customizableEdges39;
+            btnAnalytics.Size = new Size(185, 47);
+            btnAnalytics.TabIndex = 37;
+            btnAnalytics.Text = "ANALYTICS";
             // 
-            // button3
+            // btnOrder
             // 
-            button3.Location = new Point(347, 322);
-            button3.Name = "button3";
-            button3.Size = new Size(108, 41);
-            button3.TabIndex = 8;
-            button3.Text = "Clear Fields";
-            button3.UseVisualStyleBackColor = true;
+            btnOrder.CustomizableEdges = customizableEdges40;
+            btnOrder.DisabledState.BorderColor = Color.DarkGray;
+            btnOrder.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnOrder.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnOrder.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnOrder.FillColor = Color.Transparent;
+            btnOrder.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOrder.ForeColor = Color.White;
+            btnOrder.Location = new Point(0, 309);
+            btnOrder.Name = "btnOrder";
+            btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges41;
+            btnOrder.Size = new Size(185, 47);
+            btnOrder.TabIndex = 36;
+            btnOrder.Text = "ORDER";
             // 
-            // button2
+            // btnSupply
             // 
-            button2.Location = new Point(347, 258);
-            button2.Name = "button2";
-            button2.Size = new Size(108, 41);
-            button2.TabIndex = 7;
-            button2.Text = "Edit Order";
-            button2.UseVisualStyleBackColor = true;
+            btnSupply.CustomizableEdges = customizableEdges42;
+            btnSupply.DisabledState.BorderColor = Color.DarkGray;
+            btnSupply.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSupply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSupply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSupply.FillColor = Color.Transparent;
+            btnSupply.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSupply.ForeColor = Color.White;
+            btnSupply.Location = new Point(0, 209);
+            btnSupply.Name = "btnSupply";
+            btnSupply.ShadowDecoration.CustomizableEdges = customizableEdges43;
+            btnSupply.Size = new Size(185, 47);
+            btnSupply.TabIndex = 35;
+            btnSupply.Text = "SUPPLY";
             // 
-            // button1
+            // btnInventory
             // 
-            button1.Location = new Point(194, 258);
-            button1.Name = "button1";
-            button1.Size = new Size(108, 41);
-            button1.TabIndex = 6;
-            button1.Text = "Add Order";
-            button1.UseVisualStyleBackColor = true;
+            btnInventory.CustomizableEdges = customizableEdges44;
+            btnInventory.DisabledState.BorderColor = Color.DarkGray;
+            btnInventory.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInventory.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInventory.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInventory.FillColor = Color.Transparent;
+            btnInventory.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnInventory.ForeColor = Color.White;
+            btnInventory.Location = new Point(0, 109);
+            btnInventory.Name = "btnInventory";
+            btnInventory.ShadowDecoration.CustomizableEdges = customizableEdges45;
+            btnInventory.Size = new Size(185, 47);
+            btnInventory.TabIndex = 32;
+            btnInventory.Text = "INVENTORY";
             // 
-            // textBox3
+            // guna2GradientPanel2
             // 
-            textBox3.Location = new Point(219, 202);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(202, 27);
-            textBox3.TabIndex = 5;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(219, 132);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(202, 27);
-            textBox2.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(219, 66);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(202, 27);
-            textBox1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(219, 179);
-            label3.Name = "label3";
-            label3.Size = new Size(72, 20);
-            label3.TabIndex = 2;
-            label3.Text = "Customer";
+            guna2GradientPanel2.BackColor = Color.Transparent;
+            guna2GradientPanel2.BorderRadius = 13;
+            guna2GradientPanel2.Controls.Add(btnAddItem);
+            guna2GradientPanel2.Controls.Add(txtSearchSupply);
+            guna2GradientPanel2.Controls.Add(dgvOrder3);
+            guna2GradientPanel2.Controls.Add(dgvOrder2);
+            guna2GradientPanel2.Controls.Add(dgvOrder1);
+            guna2GradientPanel2.Controls.Add(btnAddSupply);
+            guna2GradientPanel2.Controls.Add(btnClearSupply);
+            guna2GradientPanel2.Controls.Add(btnEditSupply);
+            guna2GradientPanel2.Controls.Add(btnDelSupply);
+            guna2GradientPanel2.Controls.Add(txtCustomerName);
+            guna2GradientPanel2.Controls.Add(txtOrderDate);
+            guna2GradientPanel2.Controls.Add(txtOrderID);
+            guna2GradientPanel2.Controls.Add(label2);
+            guna2GradientPanel2.Controls.Add(btnExitOrder);
+            guna2GradientPanel2.Controls.Add(label3);
+            guna2GradientPanel2.CustomizableEdges = customizableEdges67;
+            guna2GradientPanel2.FillColor = Color.FromArgb(0, 48, 73);
+            guna2GradientPanel2.FillColor2 = Color.FromArgb(214, 40, 40);
+            guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            guna2GradientPanel2.Location = new Point(195, 0);
+            guna2GradientPanel2.Name = "guna2GradientPanel2";
+            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges68;
+            guna2GradientPanel2.Size = new Size(1163, 748);
+            guna2GradientPanel2.TabIndex = 4;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(219, 109);
+            label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(26, 16);
             label2.Name = "label2";
-            label2.Size = new Size(41, 20);
-            label2.TabIndex = 1;
-            label2.Text = "Date";
+            label2.Size = new Size(51, 23);
+            label2.TabIndex = 43;
+            label2.Text = "IOST";
             // 
-            // label1
+            // btnExitOrder
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(219, 43);
-            label1.Name = "label1";
-            label1.Size = new Size(66, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Order ID";
+            btnExitOrder.CheckedState.ImageSize = new Size(64, 64);
+            btnExitOrder.HoverState.ImageSize = new Size(64, 64);
+            btnExitOrder.Image = (Image)resources.GetObject("btnExitOrder.Image");
+            btnExitOrder.ImageOffset = new Point(0, 0);
+            btnExitOrder.ImageRotate = 0F;
+            btnExitOrder.ImageSize = new Size(24, 24);
+            btnExitOrder.Location = new Point(1110, 12);
+            btnExitOrder.Name = "btnExitOrder";
+            btnExitOrder.PressedState.ImageSize = new Size(64, 64);
+            btnExitOrder.ShadowDecoration.CustomizableEdges = customizableEdges66;
+            btnExitOrder.Size = new Size(29, 30);
+            btnExitOrder.TabIndex = 42;
             // 
-            // label4
+            // label3
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(228, 375);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Quantity";
+            label3.BackColor = SystemColors.ButtonFace;
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(17, 50);
+            label3.Name = "label3";
+            label3.Size = new Size(1133, 1);
+            label3.TabIndex = 41;
             // 
-            // textBox4
+            // btnAddItem
             // 
-            textBox4.Location = new Point(299, 372);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(202, 27);
-            textBox4.TabIndex = 10;
+            btnAddItem.BorderColor = Color.FromArgb(128, 0, 255);
+            btnAddItem.BorderRadius = 13;
+            btnAddItem.BorderThickness = 2;
+            btnAddItem.CustomizableEdges = customizableEdges48;
+            btnAddItem.DisabledState.BorderColor = Color.DarkGray;
+            btnAddItem.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddItem.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddItem.FillColor = Color.Transparent;
+            btnAddItem.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddItem.ForeColor = Color.FromArgb(128, 0, 255);
+            btnAddItem.Location = new Point(1001, 360);
+            btnAddItem.Name = "btnAddItem";
+            btnAddItem.ShadowDecoration.CustomizableEdges = customizableEdges49;
+            btnAddItem.Size = new Size(63, 28);
+            btnAddItem.TabIndex = 72;
+            btnAddItem.Text = "ADD";
             // 
-            // button5
+            // txtSearchSupply
             // 
-            button5.Location = new Point(507, 369);
-            button5.Name = "button5";
-            button5.Size = new Size(80, 30);
-            button5.TabIndex = 10;
-            button5.Text = "Add Item";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            txtSearchSupply.BorderRadius = 10;
+            txtSearchSupply.CustomizableEdges = customizableEdges50;
+            txtSearchSupply.DefaultText = "";
+            txtSearchSupply.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearchSupply.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearchSupply.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchSupply.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchSupply.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearchSupply.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtSearchSupply.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearchSupply.Location = new Point(631, 361);
+            txtSearchSupply.Margin = new Padding(3, 4, 3, 4);
+            txtSearchSupply.Name = "txtSearchSupply";
+            txtSearchSupply.PlaceholderText = "Search";
+            txtSearchSupply.SelectedText = "";
+            txtSearchSupply.ShadowDecoration.CustomizableEdges = customizableEdges51;
+            txtSearchSupply.Size = new Size(364, 27);
+            txtSearchSupply.TabIndex = 71;
             // 
-            // dataGridView1
+            // dgvOrder3
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 12);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(602, 351);
-            dataGridView1.TabIndex = 0;
+            dgvOrder3.BackgroundColor = Color.White;
+            dgvOrder3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvOrder3.Location = new Point(580, 407);
+            dgvOrder3.Name = "dgvOrder3";
+            dgvOrder3.RowHeadersWidth = 51;
+            dgvOrder3.Size = new Size(568, 318);
+            dgvOrder3.TabIndex = 70;
             // 
-            // splitContainer3
+            // dgvOrder2
             // 
-            splitContainer3.Dock = DockStyle.Fill;
-            splitContainer3.Location = new Point(0, 0);
-            splitContainer3.Name = "splitContainer3";
+            dgvOrder2.BackgroundColor = Color.White;
+            dgvOrder2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvOrder2.Location = new Point(15, 407);
+            dgvOrder2.Name = "dgvOrder2";
+            dgvOrder2.RowHeadersWidth = 51;
+            dgvOrder2.Size = new Size(542, 318);
+            dgvOrder2.TabIndex = 69;
             // 
-            // splitContainer3.Panel1
+            // dgvOrder1
             // 
-            splitContainer3.Panel1.Controls.Add(label5);
-            splitContainer3.Panel1.Controls.Add(textBox5);
-            splitContainer3.Panel1.Controls.Add(dataGridView2);
+            dgvOrder1.BackgroundColor = Color.White;
+            dgvOrder1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvOrder1.Location = new Point(580, 68);
+            dgvOrder1.Name = "dgvOrder1";
+            dgvOrder1.RowHeadersWidth = 51;
+            dgvOrder1.Size = new Size(568, 286);
+            dgvOrder1.TabIndex = 68;
             // 
-            // splitContainer3.Panel2
+            // btnAddSupply
             // 
-            splitContainer3.Panel2.Controls.Add(label6);
-            splitContainer3.Panel2.Controls.Add(textBox6);
-            splitContainer3.Panel2.Controls.Add(dataGridView3);
-            splitContainer3.Size = new Size(1259, 393);
-            splitContainer3.SplitterDistance = 628;
-            splitContainer3.TabIndex = 0;
-            splitContainer3.SplitterMoved += splitContainer3_SplitterMoved;
+            btnAddSupply.BorderColor = Color.FromArgb(4, 171, 92);
+            btnAddSupply.BorderRadius = 13;
+            btnAddSupply.BorderThickness = 2;
+            btnAddSupply.CustomizableEdges = customizableEdges52;
+            btnAddSupply.DisabledState.BorderColor = Color.DarkGray;
+            btnAddSupply.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAddSupply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAddSupply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAddSupply.FillColor = Color.Transparent;
+            btnAddSupply.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddSupply.ForeColor = Color.FromArgb(4, 171, 92);
+            btnAddSupply.Location = new Point(69, 316);
+            btnAddSupply.Name = "btnAddSupply";
+            btnAddSupply.ShadowDecoration.CustomizableEdges = customizableEdges53;
+            btnAddSupply.Size = new Size(116, 35);
+            btnAddSupply.TabIndex = 67;
+            btnAddSupply.Text = "ADD ORDER";
             // 
-            // label5
+            // btnClearSupply
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(327, 352);
-            label5.Name = "label5";
-            label5.Size = new Size(80, 20);
-            label5.TabIndex = 10;
-            label5.Text = "Total Sales";
+            btnClearSupply.BorderColor = Color.FromArgb(0, 192, 192);
+            btnClearSupply.BorderRadius = 13;
+            btnClearSupply.BorderThickness = 2;
+            btnClearSupply.CustomizableEdges = customizableEdges54;
+            btnClearSupply.DisabledState.BorderColor = Color.DarkGray;
+            btnClearSupply.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnClearSupply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnClearSupply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClearSupply.FillColor = Color.Transparent;
+            btnClearSupply.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClearSupply.ForeColor = Color.FromArgb(0, 192, 192);
+            btnClearSupply.Location = new Point(308, 316);
+            btnClearSupply.Name = "btnClearSupply";
+            btnClearSupply.ShadowDecoration.CustomizableEdges = customizableEdges55;
+            btnClearSupply.Size = new Size(76, 35);
+            btnClearSupply.TabIndex = 66;
+            btnClearSupply.Text = "CLEAR";
             // 
-            // textBox5
+            // btnEditSupply
             // 
-            textBox5.Location = new Point(413, 349);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(202, 27);
-            textBox5.TabIndex = 10;
+            btnEditSupply.BorderColor = Color.Orange;
+            btnEditSupply.BorderRadius = 13;
+            btnEditSupply.BorderThickness = 2;
+            btnEditSupply.CustomizableEdges = customizableEdges56;
+            btnEditSupply.DisabledState.BorderColor = Color.DarkGray;
+            btnEditSupply.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnEditSupply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnEditSupply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnEditSupply.FillColor = Color.Transparent;
+            btnEditSupply.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditSupply.ForeColor = Color.Orange;
+            btnEditSupply.Location = new Point(191, 316);
+            btnEditSupply.Name = "btnEditSupply";
+            btnEditSupply.ShadowDecoration.CustomizableEdges = customizableEdges57;
+            btnEditSupply.Size = new Size(111, 35);
+            btnEditSupply.TabIndex = 65;
+            btnEditSupply.Text = "EDIT ORDER";
             // 
-            // dataGridView2
+            // btnDelSupply
             // 
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(12, 12);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(603, 331);
-            dataGridView2.TabIndex = 11;
+            btnDelSupply.BorderColor = Color.Firebrick;
+            btnDelSupply.BorderRadius = 13;
+            btnDelSupply.BorderThickness = 2;
+            btnDelSupply.CustomizableEdges = customizableEdges58;
+            btnDelSupply.DisabledState.BorderColor = Color.DarkGray;
+            btnDelSupply.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDelSupply.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDelSupply.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDelSupply.FillColor = Color.Transparent;
+            btnDelSupply.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDelSupply.ForeColor = Color.Firebrick;
+            btnDelSupply.Location = new Point(390, 316);
+            btnDelSupply.Name = "btnDelSupply";
+            btnDelSupply.ShadowDecoration.CustomizableEdges = customizableEdges59;
+            btnDelSupply.Size = new Size(130, 35);
+            btnDelSupply.TabIndex = 64;
+            btnDelSupply.Text = "DELETE ORDER";
             // 
-            // label6
+            // txtCustomerName
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(357, 352);
-            label6.Name = "label6";
-            label6.Size = new Size(42, 20);
-            label6.TabIndex = 12;
-            label6.Text = "Total";
+            txtCustomerName.BorderColor = Color.White;
+            txtCustomerName.BorderRadius = 13;
+            txtCustomerName.CustomizableEdges = customizableEdges60;
+            txtCustomerName.DefaultText = "";
+            txtCustomerName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtCustomerName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtCustomerName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtCustomerName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtCustomerName.FillColor = Color.Transparent;
+            txtCustomerName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCustomerName.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtCustomerName.ForeColor = Color.White;
+            txtCustomerName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtCustomerName.Location = new Point(72, 236);
+            txtCustomerName.Margin = new Padding(3, 4, 3, 4);
+            txtCustomerName.Name = "txtCustomerName";
+            txtCustomerName.PlaceholderForeColor = Color.White;
+            txtCustomerName.PlaceholderText = "Customer Name";
+            txtCustomerName.SelectedText = "";
+            txtCustomerName.ShadowDecoration.CustomizableEdges = customizableEdges61;
+            txtCustomerName.Size = new Size(327, 27);
+            txtCustomerName.TabIndex = 63;
             // 
-            // textBox6
+            // txtOrderDate
             // 
-            textBox6.Location = new Point(413, 349);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(202, 27);
-            textBox6.TabIndex = 12;
+            txtOrderDate.BorderColor = Color.White;
+            txtOrderDate.BorderRadius = 13;
+            txtOrderDate.CustomizableEdges = customizableEdges62;
+            txtOrderDate.DefaultText = "";
+            txtOrderDate.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtOrderDate.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtOrderDate.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtOrderDate.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtOrderDate.FillColor = Color.Transparent;
+            txtOrderDate.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtOrderDate.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtOrderDate.ForeColor = Color.White;
+            txtOrderDate.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtOrderDate.Location = new Point(72, 176);
+            txtOrderDate.Margin = new Padding(3, 4, 3, 4);
+            txtOrderDate.Name = "txtOrderDate";
+            txtOrderDate.PlaceholderForeColor = Color.White;
+            txtOrderDate.PlaceholderText = "Date";
+            txtOrderDate.SelectedText = "";
+            txtOrderDate.ShadowDecoration.CustomizableEdges = customizableEdges63;
+            txtOrderDate.Size = new Size(327, 27);
+            txtOrderDate.TabIndex = 62;
             // 
-            // dataGridView3
+            // txtOrderID
             // 
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Location = new Point(13, 12);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(603, 331);
-            dataGridView3.TabIndex = 12;
+            txtOrderID.BorderColor = Color.White;
+            txtOrderID.BorderRadius = 13;
+            txtOrderID.CustomizableEdges = customizableEdges64;
+            txtOrderID.DefaultText = "";
+            txtOrderID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtOrderID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtOrderID.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtOrderID.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtOrderID.FillColor = Color.Transparent;
+            txtOrderID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtOrderID.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtOrderID.ForeColor = Color.White;
+            txtOrderID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtOrderID.Location = new Point(72, 116);
+            txtOrderID.Margin = new Padding(3, 4, 3, 4);
+            txtOrderID.Name = "txtOrderID";
+            txtOrderID.PlaceholderForeColor = Color.White;
+            txtOrderID.PlaceholderText = "Order ID";
+            txtOrderID.SelectedText = "";
+            txtOrderID.ShadowDecoration.CustomizableEdges = customizableEdges65;
+            txtOrderID.Size = new Size(327, 27);
+            txtOrderID.TabIndex = 61;
             // 
             // OrderView
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1259, 809);
-            Controls.Add(splitContainer1);
+            BackColor = Color.Black;
+            ClientSize = new Size(1358, 750);
+            Controls.Add(guna2GradientPanel3);
+            Controls.Add(guna2GradientPanel2);
+            FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "OrderView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "OrderView";
-            splitContainer1.Panel1.ResumeLayout(false);
-            splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
-            splitContainer1.ResumeLayout(false);
-            splitContainer2.Panel1.ResumeLayout(false);
-            splitContainer2.Panel1.PerformLayout();
-            splitContainer2.Panel2.ResumeLayout(false);
-            splitContainer2.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
-            splitContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            splitContainer3.Panel1.ResumeLayout(false);
-            splitContainer3.Panel1.PerformLayout();
-            splitContainer3.Panel2.ResumeLayout(false);
-            splitContainer3.Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)splitContainer3).EndInit();
-            splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            guna2GradientPanel3.ResumeLayout(false);
+            guna2GradientPanel2.ResumeLayout(false);
+            guna2GradientPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvOrder1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private SplitContainer splitContainer1;
-        private SplitContainer splitContainer2;
-        private Button button2;
-        private Button button1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Label label3;
-        private Label label2;
+        private Panel panel2;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnAnalytics;
+        private Guna.UI2.WinForms.Guna2Button btnOrder;
+        private Guna.UI2.WinForms.Guna2Button btnSupply;
+        private Guna.UI2.WinForms.Guna2Button btnInventory;
         private Label label1;
-        private SplitContainer splitContainer3;
-        private Button button4;
-        private Button button3;
-        private DataGridView dataGridView1;
-        private TextBox textBox4;
-        private Button button5;
-        private Label label4;
-        private DataGridView dataGridView2;
-        private Label label5;
-        private TextBox textBox5;
-        private Label label6;
-        private TextBox textBox6;
-        private DataGridView dataGridView3;
+        private Label label9;
+        private Label label2;
+        private Guna.UI2.WinForms.Guna2ImageButton btnExitOrder;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2ImageButton btnLogout2;
+        private Guna.UI2.WinForms.Guna2Button btnAddItem;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchSupply;
+        private DataGridView dgvOrder3;
+        private DataGridView dgvOrder2;
+        private DataGridView dgvOrder1;
+        private Guna.UI2.WinForms.Guna2Button btnAddSupply;
+        private Guna.UI2.WinForms.Guna2Button btnClearSupply;
+        private Guna.UI2.WinForms.Guna2Button btnEditSupply;
+        private Guna.UI2.WinForms.Guna2Button btnDelSupply;
+        private Guna.UI2.WinForms.Guna2TextBox txtCustomerName;
+        private Guna.UI2.WinForms.Guna2TextBox txtOrderDate;
+        private Guna.UI2.WinForms.Guna2TextBox txtOrderID;
     }
 }

@@ -37,29 +37,26 @@
             // 
             // txtUsername
             // 
-            txtUsername.Location = new Point(65, 115);
-            txtUsername.Margin = new Padding(3, 2, 3, 2);
+            txtUsername.Location = new Point(74, 153);
             txtUsername.Name = "txtUsername";
             txtUsername.PlaceholderText = "Username";
-            txtUsername.Size = new Size(210, 23);
+            txtUsername.Size = new Size(239, 27);
             txtUsername.TabIndex = 0;
             // 
             // txtPassword
             // 
-            txtPassword.Location = new Point(65, 167);
-            txtPassword.Margin = new Padding(3, 2, 3, 2);
+            txtPassword.Location = new Point(74, 223);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '*';
             txtPassword.PlaceholderText = "Password";
-            txtPassword.Size = new Size(210, 23);
+            txtPassword.Size = new Size(239, 27);
             txtPassword.TabIndex = 1;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(109, 215);
-            btnLogin.Margin = new Padding(3, 2, 3, 2);
+            btnLogin.Location = new Point(125, 287);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(116, 38);
+            btnLogin.Size = new Size(133, 51);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = true;
@@ -69,10 +66,10 @@
             // 
             lblInventory.AutoSize = true;
             lblInventory.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblInventory.Location = new Point(115, 47);
+            lblInventory.Location = new Point(131, 63);
             lblInventory.Margin = new Padding(2, 0, 2, 0);
             lblInventory.Name = "lblInventory";
-            lblInventory.Size = new Size(104, 45);
+            lblInventory.Size = new Size(127, 54);
             lblInventory.TabIndex = 3;
             lblInventory.Text = "Login";
             lblInventory.TextAlign = ContentAlignment.TopCenter;
@@ -80,25 +77,27 @@
             // lnkRegister
             // 
             lnkRegister.AutoSize = true;
-            lnkRegister.Location = new Point(65, 284);
+            lnkRegister.Location = new Point(74, 379);
             lnkRegister.Name = "lnkRegister";
-            lnkRegister.Size = new Size(205, 15);
+            lnkRegister.Size = new Size(256, 20);
             lnkRegister.TabIndex = 4;
             lnkRegister.TabStop = true;
             lnkRegister.Text = "Don't have an account? Register now.";
             // 
             // LoginView
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(340, 327);
+            ClientSize = new Size(389, 436);
             Controls.Add(lnkRegister);
             Controls.Add(lblInventory);
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(txtUsername);
-            Margin = new Padding(2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 3, 2, 3);
             Name = "LoginView";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "LoginView";
             ResumeLayout(false);
             PerformLayout();
