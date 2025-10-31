@@ -15,6 +15,13 @@ namespace projectIost.Views
         public AnalyticsView()
         {
             InitializeComponent();
+            gunaScrollBar.BindingContainer = dgvSales;
+            gunaScrollBar.AutoScroll = true;
+        }
+
+        private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
