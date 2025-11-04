@@ -61,7 +61,7 @@ namespace projectIost.Views
                 return;
             }
 
-            if (!int.TryParse(txtQuantity.Text, out var quantity)) quantity = 0;
+            if (!int.TryParse(txtSKU.Text, out var quantity)) quantity = 0;
             if (!decimal.TryParse(txtCostPrice.Text, out var cost)) cost = 0m;
             if (!decimal.TryParse(txtRetailPrice.Text, out var price)) price = 0m;
 
@@ -120,7 +120,7 @@ namespace projectIost.Views
                 return;
             }
 
-            if (!int.TryParse(txtQuantity.Text, out var quantity)) quantity = 0;
+            if (!int.TryParse(txtSKU.Text, out var quantity)) quantity = 0;
             if (!decimal.TryParse(txtCostPrice.Text, out var cost)) cost = 0m;
             if (!decimal.TryParse(txtRetailPrice.Text, out var price)) price = 0m;
 
@@ -251,7 +251,7 @@ namespace projectIost.Views
                 txtID.Text = selected.Item_id.ToString();
                 txtSKU.Text = selected.Item_SKU ?? string.Empty;
                 txtName.Text = selected.Item_name ?? string.Empty;
-                txtQuantity.Text = selected.Item_quantity.ToString();
+                txtSKU.Text = selected.Item_quantity.ToString();
                 txtCostPrice.Text = selected.Item_cost.ToString();
                 txtRetailPrice.Text = selected.Item_price.ToString();
             }
@@ -266,7 +266,7 @@ namespace projectIost.Views
             txtID.Clear();
             txtSKU.Clear();
             txtName.Clear();
-            txtQuantity.Clear();
+            txtSKU.Clear();
             txtCostPrice.Clear();
             txtRetailPrice.Clear();
         }
