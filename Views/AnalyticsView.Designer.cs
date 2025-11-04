@@ -82,6 +82,9 @@
             btnSupply = new Guna.UI2.WinForms.Guna2Button();
             btnAnalytics = new Guna.UI2.WinForms.Guna2Button();
             guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            label11 = new Label();
+            label10 = new Label();
+            label8 = new Label();
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
@@ -99,9 +102,6 @@
             label2 = new Label();
             btnExitAnalytics = new Guna.UI2.WinForms.Guna2ImageButton();
             label3 = new Label();
-            label8 = new Label();
-            label10 = new Label();
-            label11 = new Label();
             guna2GradientPanel3.SuspendLayout();
             guna2GradientPanel2.SuspendLayout();
             panelMonths.SuspendLayout();
@@ -120,7 +120,6 @@
             // guna2GradientPanel3
             // 
             guna2GradientPanel3.BackColor = Color.Transparent;
-            guna2GradientPanel3.BorderRadius = 13;
             guna2GradientPanel3.Controls.Add(btnLogout2);
             guna2GradientPanel3.Controls.Add(panel2);
             guna2GradientPanel3.Controls.Add(label1);
@@ -262,7 +261,6 @@
             // guna2GradientPanel2
             // 
             guna2GradientPanel2.BackColor = Color.Transparent;
-            guna2GradientPanel2.BorderRadius = 13;
             guna2GradientPanel2.Controls.Add(label11);
             guna2GradientPanel2.Controls.Add(label10);
             guna2GradientPanel2.Controls.Add(label8);
@@ -287,6 +285,36 @@
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges23;
             guna2GradientPanel2.Size = new Size(1163, 748);
             guna2GradientPanel2.TabIndex = 4;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label11.Location = new Point(985, 144);
+            label11.Name = "label11";
+            label11.Size = new Size(36, 40);
+            label11.TabIndex = 70;
+            label11.Text = "0";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label10.Location = new Point(576, 143);
+            label10.Name = "label10";
+            label10.Size = new Size(36, 40);
+            label10.TabIndex = 69;
+            label10.Text = "0";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(196, 143);
+            label8.Name = "label8";
+            label8.Size = new Size(36, 40);
+            label8.TabIndex = 68;
+            label8.Text = "0";
             // 
             // label7
             // 
@@ -566,36 +594,6 @@
             label3.Name = "label3";
             label3.Size = new Size(1133, 1);
             label3.TabIndex = 53;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(196, 143);
-            label8.Name = "label8";
-            label8.Size = new Size(36, 40);
-            label8.TabIndex = 68;
-            label8.Text = "0";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(576, 143);
-            label10.Name = "label10";
-            label10.Size = new Size(36, 40);
-            label10.TabIndex = 69;
-            label10.Text = "0";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(985, 144);
-            label11.Name = "label11";
-            label11.Size = new Size(36, 40);
-            label11.TabIndex = 70;
-            label11.Text = "0";
             // 
             // AnalyticsView
             // 

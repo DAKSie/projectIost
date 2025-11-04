@@ -107,7 +107,6 @@
             // guna2GradientPanel3
             // 
             guna2GradientPanel3.BackColor = Color.Transparent;
-            guna2GradientPanel3.BorderRadius = 13;
             guna2GradientPanel3.Controls.Add(btnLogout2);
             guna2GradientPanel3.Controls.Add(label2);
             guna2GradientPanel3.Controls.Add(label1);
@@ -248,7 +247,6 @@
             // guna2GradientPanel2
             // 
             guna2GradientPanel2.BackColor = Color.Transparent;
-            guna2GradientPanel2.BorderRadius = 13;
             guna2GradientPanel2.Controls.Add(btnAddItem);
             guna2GradientPanel2.Controls.Add(txtSearchSupply);
             guna2GradientPanel2.Controls.Add(dgvSupply3);

@@ -75,11 +75,11 @@
             btnClear = new Guna.UI2.WinForms.Guna2Button();
             btnEdit = new Guna.UI2.WinForms.Guna2Button();
             btnDel = new Guna.UI2.WinForms.Guna2Button();
-            txtRetail = new Guna.UI2.WinForms.Guna2TextBox();
+            txtRetailPrice = new Guna.UI2.WinForms.Guna2TextBox();
             txtCostPrice = new Guna.UI2.WinForms.Guna2TextBox();
-            txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSKU = new Guna.UI2.WinForms.Guna2TextBox();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            txtProduct = new Guna.UI2.WinForms.Guna2TextBox();
+            txtID = new Guna.UI2.WinForms.Guna2TextBox();
             dgvInventory = new DataGridView();
             label1 = new Label();
             guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
@@ -100,7 +100,6 @@
             // guna2GradientPanel2
             // 
             guna2GradientPanel2.BackColor = Color.Transparent;
-            guna2GradientPanel2.BorderRadius = 13;
             guna2GradientPanel2.Controls.Add(label2);
             guna2GradientPanel2.Controls.Add(btnExit);
             guna2GradientPanel2.Controls.Add(btnSearch);
@@ -109,11 +108,11 @@
             guna2GradientPanel2.Controls.Add(btnClear);
             guna2GradientPanel2.Controls.Add(btnEdit);
             guna2GradientPanel2.Controls.Add(btnDel);
-            guna2GradientPanel2.Controls.Add(txtRetail);
+            guna2GradientPanel2.Controls.Add(txtRetailPrice);
             guna2GradientPanel2.Controls.Add(txtCostPrice);
-            guna2GradientPanel2.Controls.Add(txtQuantity);
+            guna2GradientPanel2.Controls.Add(txtSKU);
             guna2GradientPanel2.Controls.Add(txtName);
-            guna2GradientPanel2.Controls.Add(txtProduct);
+            guna2GradientPanel2.Controls.Add(txtID);
             guna2GradientPanel2.Controls.Add(dgvInventory);
             guna2GradientPanel2.Controls.Add(label1);
             guna2GradientPanel2.CustomizableEdges = customizableEdges23;
@@ -272,29 +271,29 @@
             btnDel.Text = "DELETE";
             btnDel.Click += guna2Button1_Click;
             // 
-            // txtRetail
+            // txtRetailPrice
             // 
-            txtRetail.BorderColor = Color.White;
-            txtRetail.BorderRadius = 13;
-            txtRetail.CustomizableEdges = customizableEdges13;
-            txtRetail.DefaultText = "";
-            txtRetail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtRetail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtRetail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtRetail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtRetail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRetail.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtRetail.ForeColor = Color.White;
-            txtRetail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRetail.Location = new Point(787, 68);
-            txtRetail.Margin = new Padding(3, 4, 3, 4);
-            txtRetail.Name = "txtRetail";
-            txtRetail.PlaceholderForeColor = Color.Gray;
-            txtRetail.PlaceholderText = "Retail Price";
-            txtRetail.SelectedText = "";
-            txtRetail.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtRetail.Size = new Size(327, 27);
-            txtRetail.TabIndex = 6;
+            txtRetailPrice.BorderColor = Color.White;
+            txtRetailPrice.BorderRadius = 13;
+            txtRetailPrice.CustomizableEdges = customizableEdges13;
+            txtRetailPrice.DefaultText = "";
+            txtRetailPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtRetailPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtRetailPrice.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtRetailPrice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtRetailPrice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRetailPrice.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtRetailPrice.ForeColor = Color.White;
+            txtRetailPrice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRetailPrice.Location = new Point(787, 68);
+            txtRetailPrice.Margin = new Padding(3, 4, 3, 4);
+            txtRetailPrice.Name = "txtRetailPrice";
+            txtRetailPrice.PlaceholderForeColor = Color.Gray;
+            txtRetailPrice.PlaceholderText = "Retail Price";
+            txtRetailPrice.SelectedText = "";
+            txtRetailPrice.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtRetailPrice.Size = new Size(327, 27);
+            txtRetailPrice.TabIndex = 6;
             // 
             // txtCostPrice
             // 
@@ -320,29 +319,29 @@
             txtCostPrice.Size = new Size(327, 27);
             txtCostPrice.TabIndex = 5;
             // 
-            // txtQuantity
+            // txtSKU
             // 
-            txtQuantity.BorderColor = Color.White;
-            txtQuantity.BorderRadius = 13;
-            txtQuantity.CustomizableEdges = customizableEdges17;
-            txtQuantity.DefaultText = "";
-            txtQuantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtQuantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtQuantity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtQuantity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtQuantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtQuantity.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtQuantity.ForeColor = Color.White;
-            txtQuantity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtQuantity.Location = new Point(399, 68);
-            txtQuantity.Margin = new Padding(3, 4, 3, 4);
-            txtQuantity.Name = "txtQuantity";
-            txtQuantity.PlaceholderForeColor = Color.Gray;
-            txtQuantity.PlaceholderText = "Quantity";
-            txtQuantity.SelectedText = "";
-            txtQuantity.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtQuantity.Size = new Size(327, 27);
-            txtQuantity.TabIndex = 4;
+            txtSKU.BorderColor = Color.White;
+            txtSKU.BorderRadius = 13;
+            txtSKU.CustomizableEdges = customizableEdges17;
+            txtSKU.DefaultText = "";
+            txtSKU.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSKU.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSKU.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSKU.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSKU.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSKU.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtSKU.ForeColor = Color.White;
+            txtSKU.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSKU.Location = new Point(399, 68);
+            txtSKU.Margin = new Padding(3, 4, 3, 4);
+            txtSKU.Name = "txtSKU";
+            txtSKU.PlaceholderForeColor = Color.Gray;
+            txtSKU.PlaceholderText = "Quantity";
+            txtSKU.SelectedText = "";
+            txtSKU.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtSKU.Size = new Size(327, 27);
+            txtSKU.TabIndex = 4;
             // 
             // txtName
             // 
@@ -368,29 +367,29 @@
             txtName.Size = new Size(327, 27);
             txtName.TabIndex = 3;
             // 
-            // txtProduct
+            // txtID
             // 
-            txtProduct.BorderColor = Color.White;
-            txtProduct.BorderRadius = 13;
-            txtProduct.CustomizableEdges = customizableEdges21;
-            txtProduct.DefaultText = "";
-            txtProduct.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtProduct.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtProduct.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtProduct.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtProduct.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtProduct.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtProduct.ForeColor = Color.White;
-            txtProduct.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtProduct.Location = new Point(18, 68);
-            txtProduct.Margin = new Padding(3, 4, 3, 4);
-            txtProduct.Name = "txtProduct";
-            txtProduct.PlaceholderForeColor = Color.Gray;
-            txtProduct.PlaceholderText = "Product ID";
-            txtProduct.SelectedText = "";
-            txtProduct.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txtProduct.Size = new Size(327, 27);
-            txtProduct.TabIndex = 2;
+            txtID.BorderColor = Color.White;
+            txtID.BorderRadius = 13;
+            txtID.CustomizableEdges = customizableEdges21;
+            txtID.DefaultText = "";
+            txtID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtID.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtID.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtID.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            txtID.ForeColor = Color.White;
+            txtID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtID.Location = new Point(18, 68);
+            txtID.Margin = new Padding(3, 4, 3, 4);
+            txtID.Name = "txtID";
+            txtID.PlaceholderForeColor = Color.Gray;
+            txtID.PlaceholderText = "Product ID";
+            txtID.SelectedText = "";
+            txtID.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtID.Size = new Size(327, 27);
+            txtID.TabIndex = 2;
             // 
             // dgvInventory
             // 
@@ -414,7 +413,6 @@
             // guna2GradientPanel3
             // 
             guna2GradientPanel3.BackColor = Color.Transparent;
-            guna2GradientPanel3.BorderRadius = 13;
             guna2GradientPanel3.Controls.Add(btnLogout2);
             guna2GradientPanel3.Controls.Add(btnInventory);
             guna2GradientPanel3.Controls.Add(btnLogout);
@@ -587,10 +585,10 @@
         private Panel panel2;
         private Label label1;
         private DataGridView dgvInventory;
-        private Guna.UI2.WinForms.Guna2TextBox txtProduct;
-        private Guna.UI2.WinForms.Guna2TextBox txtRetail;
+        private Guna.UI2.WinForms.Guna2TextBox txtID;
+        private Guna.UI2.WinForms.Guna2TextBox txtRetailPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtCostPrice;
-        private Guna.UI2.WinForms.Guna2TextBox txtQuantity;
+        private Guna.UI2.WinForms.Guna2TextBox txtSKU;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2Button btnClear;
