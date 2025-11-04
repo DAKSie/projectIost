@@ -4,6 +4,9 @@
     <Compile Update="Views\AnalyticsView.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\RegisterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\TabView.cs">
       <SubType>Form</SubType>
     </Compile>
