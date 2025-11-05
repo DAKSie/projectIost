@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectIost.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,46 +11,74 @@ using System.Windows.Forms;
 
 namespace projectIost.Views
 {
+
+
     public partial class SupplyView : Form
     {
+        private readonly IIostService? _service;
+
+        private InventoryView _inventoryView;
+
+        private OrderView _orderView;
+
+        private AnalyticsView _analyticsView;
+
+        private LoginView _loginView;
+
         public SupplyView()
         {
             InitializeComponent();
-        }
-
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
 
         }
 
-        private void splitContainer3_SplitterMoved(object sender, SplitterEventArgs e)
+        private void btnInventory_Click(object sender, EventArgs e)
         {
+            if (_inventoryView == null || _inventoryView.IsDisposed)
+            {
+                _inventoryView = new InventoryView();
+            }
+            this.Hide();
+            _inventoryView.ShowDialog();
+            _inventoryView.BringToFront();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            if (_orderView == null || _orderView.IsDisposed)
+            {
+                _orderView = new OrderView();
+            }
+            this.Hide();
+            _orderView.ShowDialog();
+            _orderView.BringToFront();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            if (_analyticsView == null || _analyticsView.IsDisposed)
+            {
+                _analyticsView = new AnalyticsView();
+            }
+            this.Hide();
+            _analyticsView.ShowDialog();
+            _analyticsView.BringToFront();
 
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void btnExitSupply_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void splitContainer1_SplitterMoved_1(object sender, SplitterEventArgs e)
+        private void btnLogout2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void splitContainer3_SplitterMoved_1(object sender, SplitterEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            if (_loginView == null || _loginView.IsDisposed)
+            {
+                _loginView = new LoginView(_service);
+            }
+            this.Hide();
+            _loginView.ShowDialog();
+            _loginView.BringToFront();
         }
     }
 }

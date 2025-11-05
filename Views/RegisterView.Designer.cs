@@ -57,9 +57,9 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(136, 64);
+            label1.Location = new Point(119, 48);
             label1.Name = "label1";
-            label1.Size = new Size(152, 47);
+            label1.Size = new Size(122, 38);
             label1.TabIndex = 0;
             label1.Text = "Sign-in";
             // 
@@ -67,9 +67,9 @@
             // 
             label2.BackColor = Color.White;
             label2.ForeColor = Color.White;
-            label2.Location = new Point(27, 153);
+            label2.Location = new Point(24, 115);
             label2.Name = "label2";
-            label2.Size = new Size(376, 1);
+            label2.Size = new Size(329, 1);
             label2.TabIndex = 1;
             // 
             // btnExitRegister
@@ -81,12 +81,14 @@
             btnExitRegister.ImageOffset = new Point(0, 0);
             btnExitRegister.ImageRotate = 0F;
             btnExitRegister.ImageSize = new Size(24, 24);
-            btnExitRegister.Location = new Point(389, 14);
+            btnExitRegister.Location = new Point(340, 10);
+            btnExitRegister.Margin = new Padding(3, 2, 3, 2);
             btnExitRegister.Name = "btnExitRegister";
             btnExitRegister.PressedState.ImageSize = new Size(64, 64);
             btnExitRegister.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            btnExitRegister.Size = new Size(29, 30);
+            btnExitRegister.Size = new Size(25, 22);
             btnExitRegister.TabIndex = 49;
+            btnExitRegister.Click += btnExitRegister_Click;
             // 
             // txtCUser
             // 
@@ -102,13 +104,12 @@
             txtCUser.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txtCUser.ForeColor = Color.Transparent;
             txtCUser.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCUser.Location = new Point(85, 232);
-            txtCUser.Margin = new Padding(3, 4, 3, 4);
+            txtCUser.Location = new Point(74, 174);
             txtCUser.Name = "txtCUser";
             txtCUser.PlaceholderText = "Create Username";
             txtCUser.SelectedText = "";
             txtCUser.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            txtCUser.Size = new Size(268, 28);
+            txtCUser.Size = new Size(234, 21);
             txtCUser.TabIndex = 50;
             // 
             // txtCPassword
@@ -125,13 +126,12 @@
             txtCPassword.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             txtCPassword.ForeColor = Color.Transparent;
             txtCPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtCPassword.Location = new Point(85, 306);
-            txtCPassword.Margin = new Padding(3, 4, 3, 4);
+            txtCPassword.Location = new Point(74, 230);
             txtCPassword.Name = "txtCPassword";
             txtCPassword.PlaceholderText = "Create Password";
             txtCPassword.SelectedText = "";
             txtCPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            txtCPassword.Size = new Size(268, 28);
+            txtCPassword.Size = new Size(234, 21);
             txtCPassword.TabIndex = 51;
             // 
             // btnCreateAcc
@@ -148,13 +148,15 @@
             btnCreateAcc.FillColor = Color.Transparent;
             btnCreateAcc.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreateAcc.ForeColor = Color.White;
-            btnCreateAcc.Location = new Point(134, 392);
+            btnCreateAcc.Location = new Point(117, 294);
+            btnCreateAcc.Margin = new Padding(3, 2, 3, 2);
             btnCreateAcc.Name = "btnCreateAcc";
             btnCreateAcc.PressedColor = Color.FromArgb(214, 40, 40);
             btnCreateAcc.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            btnCreateAcc.Size = new Size(164, 56);
+            btnCreateAcc.Size = new Size(144, 42);
             btnCreateAcc.TabIndex = 52;
             btnCreateAcc.Text = "CREATE ACCOUNT";
+            btnCreateAcc.Click += btnCreateAcc_Click;
             // 
             // guna2GradientPanel1
             // 
@@ -170,9 +172,10 @@
             guna2GradientPanel1.FillColor2 = Color.FromArgb(214, 40, 40);
             guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             guna2GradientPanel1.Location = new Point(-1, -1);
+            guna2GradientPanel1.Margin = new Padding(3, 2, 3, 2);
             guna2GradientPanel1.Name = "guna2GradientPanel1";
             guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            guna2GradientPanel1.Size = new Size(598, 725);
+            guna2GradientPanel1.Size = new Size(523, 544);
             guna2GradientPanel1.TabIndex = 0;
             // 
             // btnGotoLogin
@@ -187,20 +190,23 @@
             btnGotoLogin.FillColor = Color.Transparent;
             btnGotoLogin.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
             btnGotoLogin.ForeColor = Color.White;
-            btnGotoLogin.Location = new Point(62, 495);
+            btnGotoLogin.Location = new Point(54, 371);
+            btnGotoLogin.Margin = new Padding(3, 2, 3, 2);
             btnGotoLogin.Name = "btnGotoLogin";
             btnGotoLogin.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            btnGotoLogin.Size = new Size(308, 27);
+            btnGotoLogin.Size = new Size(270, 20);
             btnGotoLogin.TabIndex = 53;
             btnGotoLogin.Text = "Already have an account? Login here";
+            btnGotoLogin.Click += btnGotoLogin_Click;
             // 
             // RegisterView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(429, 590);
+            ClientSize = new Size(375, 442);
             Controls.Add(guna2GradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "RegisterView";
             Text = "RegisterView";
             guna2GradientPanel1.ResumeLayout(false);

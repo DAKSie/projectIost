@@ -80,5 +80,17 @@ namespace projectIost.Services
             }
         }
         // DELETE ==================
+
+        // LOGIN ==================
+        public async Task<User?> AuthenticateUserAsync(string username, string password)
+        {
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                return null;
+
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.User_name == username && u.User_password == password);
+
+            return user;
+        }
     }
 }

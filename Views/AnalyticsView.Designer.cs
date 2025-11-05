@@ -112,9 +112,10 @@
             // panel2
             // 
             panel2.ForeColor = Color.Transparent;
-            panel2.Location = new Point(185, -5);
+            panel2.Location = new Point(162, -4);
+            panel2.Margin = new Padding(3, 2, 3, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(10, 750);
+            panel2.Size = new Size(9, 562);
             panel2.TabIndex = 0;
             // 
             // guna2GradientPanel3
@@ -134,11 +135,11 @@
             guna2GradientPanel3.FillColor2 = Color.FromArgb(214, 40, 40);
             guna2GradientPanel3.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             guna2GradientPanel3.Location = new Point(0, -2);
+            guna2GradientPanel3.Margin = new Padding(3, 2, 3, 2);
             guna2GradientPanel3.Name = "guna2GradientPanel3";
             guna2GradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges13;
-            guna2GradientPanel3.Size = new Size(188, 750);
+            guna2GradientPanel3.Size = new Size(164, 562);
             guna2GradientPanel3.TabIndex = 5;
-            guna2GradientPanel3.Paint += guna2GradientPanel3_Paint;
             // 
             // btnLogout2
             // 
@@ -148,20 +149,22 @@
             btnLogout2.ImageOffset = new Point(0, 0);
             btnLogout2.ImageRotate = 0F;
             btnLogout2.ImageSize = new Size(30, 30);
-            btnLogout2.Location = new Point(79, 644);
+            btnLogout2.Location = new Point(69, 483);
+            btnLogout2.Margin = new Padding(3, 2, 3, 2);
             btnLogout2.Name = "btnLogout2";
             btnLogout2.PressedState.ImageSize = new Size(64, 64);
             btnLogout2.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            btnLogout2.Size = new Size(29, 30);
+            btnLogout2.Size = new Size(25, 22);
             btnLogout2.TabIndex = 52;
+            btnLogout2.Click += btnLogout2_Click;
             // 
             // label1
             // 
             label1.BackColor = SystemColors.ButtonFace;
             label1.ForeColor = SystemColors.ButtonFace;
-            label1.Location = new Point(1, 404);
+            label1.Location = new Point(1, 303);
             label1.Name = "label1";
-            label1.Size = new Size(184, 1);
+            label1.Size = new Size(161, 1);
             label1.TabIndex = 51;
             // 
             // btnOrder
@@ -174,20 +177,22 @@
             btnOrder.FillColor = Color.Transparent;
             btnOrder.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnOrder.ForeColor = Color.White;
-            btnOrder.Location = new Point(0, 309);
+            btnOrder.Location = new Point(0, 232);
+            btnOrder.Margin = new Padding(3, 2, 3, 2);
             btnOrder.Name = "btnOrder";
             btnOrder.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            btnOrder.Size = new Size(185, 47);
+            btnOrder.Size = new Size(162, 35);
             btnOrder.TabIndex = 47;
             btnOrder.Text = "ORDER";
+            btnOrder.Click += btnOrder_Click;
             // 
             // label9
             // 
             label9.BackColor = SystemColors.ButtonFace;
             label9.ForeColor = SystemColors.ButtonFace;
-            label9.Location = new Point(2, 459);
+            label9.Location = new Point(2, 344);
             label9.Name = "label9";
-            label9.Size = new Size(184, 1);
+            label9.Size = new Size(161, 1);
             label9.TabIndex = 50;
             // 
             // btnInventory
@@ -200,12 +205,14 @@
             btnInventory.FillColor = Color.Transparent;
             btnInventory.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnInventory.ForeColor = Color.White;
-            btnInventory.Location = new Point(0, 109);
+            btnInventory.Location = new Point(0, 82);
+            btnInventory.Margin = new Padding(3, 2, 3, 2);
             btnInventory.Name = "btnInventory";
             btnInventory.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            btnInventory.Size = new Size(185, 47);
+            btnInventory.Size = new Size(162, 35);
             btnInventory.TabIndex = 45;
             btnInventory.Text = "INVENTORY";
+            btnInventory.Click += btnInventory_Click;
             // 
             // btnLogout
             // 
@@ -217,10 +224,11 @@
             btnLogout.FillColor = Color.Transparent;
             btnLogout.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(0, 680);
+            btnLogout.Location = new Point(0, 510);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
             btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            btnLogout.Size = new Size(185, 47);
+            btnLogout.Size = new Size(162, 35);
             btnLogout.TabIndex = 49;
             btnLogout.Text = "LOG-OUT";
             // 
@@ -234,12 +242,14 @@
             btnSupply.FillColor = Color.Transparent;
             btnSupply.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSupply.ForeColor = Color.White;
-            btnSupply.Location = new Point(0, 209);
+            btnSupply.Location = new Point(0, 157);
+            btnSupply.Margin = new Padding(3, 2, 3, 2);
             btnSupply.Name = "btnSupply";
             btnSupply.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            btnSupply.Size = new Size(185, 47);
+            btnSupply.Size = new Size(162, 35);
             btnSupply.TabIndex = 46;
             btnSupply.Text = "SUPPLY";
+            btnSupply.Click += btnSupply_Click;
             // 
             // btnAnalytics
             // 
@@ -251,10 +261,11 @@
             btnAnalytics.FillColor = Color.Transparent;
             btnAnalytics.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAnalytics.ForeColor = Color.White;
-            btnAnalytics.Location = new Point(0, 409);
+            btnAnalytics.Location = new Point(0, 307);
+            btnAnalytics.Margin = new Padding(3, 2, 3, 2);
             btnAnalytics.Name = "btnAnalytics";
             btnAnalytics.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            btnAnalytics.Size = new Size(185, 47);
+            btnAnalytics.Size = new Size(162, 35);
             btnAnalytics.TabIndex = 48;
             btnAnalytics.Text = "ANALYTICS";
             // 
@@ -280,19 +291,20 @@
             guna2GradientPanel2.FillColor = Color.FromArgb(0, 48, 73);
             guna2GradientPanel2.FillColor2 = Color.FromArgb(214, 40, 40);
             guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            guna2GradientPanel2.Location = new Point(194, -2);
+            guna2GradientPanel2.Location = new Point(170, -2);
+            guna2GradientPanel2.Margin = new Padding(3, 2, 3, 2);
             guna2GradientPanel2.Name = "guna2GradientPanel2";
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges23;
-            guna2GradientPanel2.Size = new Size(1163, 748);
+            guna2GradientPanel2.Size = new Size(1018, 561);
             guna2GradientPanel2.TabIndex = 4;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(985, 144);
+            label11.Location = new Point(862, 108);
             label11.Name = "label11";
-            label11.Size = new Size(36, 40);
+            label11.Size = new Size(30, 33);
             label11.TabIndex = 70;
             label11.Text = "0";
             // 
@@ -300,9 +312,9 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(576, 143);
+            label10.Location = new Point(504, 107);
             label10.Name = "label10";
-            label10.Size = new Size(36, 40);
+            label10.Size = new Size(30, 33);
             label10.TabIndex = 69;
             label10.Text = "0";
             // 
@@ -310,9 +322,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 19.8000011F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(196, 143);
+            label8.Location = new Point(172, 107);
             label8.Name = "label8";
-            label8.Size = new Size(36, 40);
+            label8.Size = new Size(30, 33);
             label8.TabIndex = 68;
             label8.Text = "0";
             // 
@@ -321,9 +333,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(24, 71);
+            label7.Location = new Point(21, 53);
             label7.Name = "label7";
-            label7.Size = new Size(158, 23);
+            label7.Size = new Size(127, 21);
             label7.TabIndex = 67;
             label7.Text = "Sales Overview";
             // 
@@ -331,20 +343,19 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(985, 186);
+            label6.Location = new Point(862, 140);
             label6.Name = "label6";
-            label6.Size = new Size(91, 21);
+            label6.Size = new Size(75, 19);
             label6.TabIndex = 63;
             label6.Text = "Best Seller";
-            label6.Click += label6_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(576, 185);
+            label5.Location = new Point(504, 139);
             label5.Name = "label5";
-            label5.Size = new Size(97, 21);
+            label5.Size = new Size(79, 19);
             label5.TabIndex = 62;
             label5.Text = "Total Sales";
             // 
@@ -352,9 +363,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(196, 184);
+            label4.Location = new Point(172, 138);
             label4.Name = "label4";
-            label4.Size = new Size(51, 21);
+            label4.Size = new Size(42, 19);
             label4.TabIndex = 61;
             label4.Text = "Profit";
             // 
@@ -365,11 +376,12 @@
             imgBestSellers.Image = (Image)resources.GetObject("imgBestSellers.Image");
             imgBestSellers.ImageOffset = new Point(0, 0);
             imgBestSellers.ImageRotate = 0F;
-            imgBestSellers.Location = new Point(895, 143);
+            imgBestSellers.Location = new Point(783, 107);
+            imgBestSellers.Margin = new Padding(3, 2, 3, 2);
             imgBestSellers.Name = "imgBestSellers";
             imgBestSellers.PressedState.ImageSize = new Size(64, 64);
             imgBestSellers.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            imgBestSellers.Size = new Size(75, 72);
+            imgBestSellers.Size = new Size(66, 54);
             imgBestSellers.TabIndex = 60;
             // 
             // imgSales
@@ -379,11 +391,12 @@
             imgSales.Image = (Image)resources.GetObject("imgSales.Image");
             imgSales.ImageOffset = new Point(0, 0);
             imgSales.ImageRotate = 0F;
-            imgSales.Location = new Point(486, 144);
+            imgSales.Location = new Point(425, 108);
+            imgSales.Margin = new Padding(3, 2, 3, 2);
             imgSales.Name = "imgSales";
             imgSales.PressedState.ImageSize = new Size(64, 64);
             imgSales.ShadowDecoration.CustomizableEdges = customizableEdges15;
-            imgSales.Size = new Size(75, 72);
+            imgSales.Size = new Size(66, 54);
             imgSales.TabIndex = 59;
             // 
             // imgProfit
@@ -393,11 +406,12 @@
             imgProfit.Image = (Image)resources.GetObject("imgProfit.Image");
             imgProfit.ImageOffset = new Point(0, 0);
             imgProfit.ImageRotate = 0F;
-            imgProfit.Location = new Point(106, 144);
+            imgProfit.Location = new Point(93, 108);
+            imgProfit.Margin = new Padding(3, 2, 3, 2);
             imgProfit.Name = "imgProfit";
             imgProfit.PressedState.ImageSize = new Size(64, 64);
             imgProfit.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            imgProfit.Size = new Size(75, 72);
+            imgProfit.Size = new Size(66, 54);
             imgProfit.TabIndex = 58;
             // 
             // panelMonths
@@ -409,10 +423,11 @@
             panelMonths.Controls.Add(gunaScrollBar);
             panelMonths.Controls.Add(dgvSales);
             panelMonths.CustomizableEdges = customizableEdges17;
-            panelMonths.Location = new Point(24, 294);
+            panelMonths.Location = new Point(21, 220);
+            panelMonths.Margin = new Padding(3, 2, 3, 2);
             panelMonths.Name = "panelMonths";
             panelMonths.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            panelMonths.Size = new Size(331, 423);
+            panelMonths.Size = new Size(290, 317);
             panelMonths.TabIndex = 57;
             // 
             // gunaScrollBar
@@ -420,10 +435,11 @@
             gunaScrollBar.FillColor = Color.FromArgb(52, 64, 80);
             gunaScrollBar.InUpdate = false;
             gunaScrollBar.LargeChange = 10;
-            gunaScrollBar.Location = new Point(307, 58);
+            gunaScrollBar.Location = new Point(269, 44);
+            gunaScrollBar.Margin = new Padding(3, 2, 3, 2);
             gunaScrollBar.Name = "gunaScrollBar";
-            gunaScrollBar.ScrollbarSize = 17;
-            gunaScrollBar.Size = new Size(17, 342);
+            gunaScrollBar.ScrollbarSize = 15;
+            gunaScrollBar.Size = new Size(15, 256);
             gunaScrollBar.TabIndex = 1;
             gunaScrollBar.ThumbColor = Color.FromArgb(27, 30, 40);
             // 
@@ -457,7 +473,8 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dgvSales.DefaultCellStyle = dataGridViewCellStyle3;
             dgvSales.GridColor = Color.FromArgb(231, 229, 255);
-            dgvSales.Location = new Point(7, 24);
+            dgvSales.Location = new Point(6, 18);
+            dgvSales.Margin = new Padding(3, 2, 3, 2);
             dgvSales.Name = "dgvSales";
             dgvSales.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -470,7 +487,8 @@
             dgvSales.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvSales.RowHeadersVisible = false;
             dgvSales.RowHeadersWidth = 51;
-            dgvSales.Size = new Size(298, 376);
+            dgvSales.RowTemplate.Height = 29;
+            dgvSales.Size = new Size(261, 282);
             dgvSales.TabIndex = 0;
             dgvSales.ThemeStyle.AlternatingRowsStyle.BackColor = Color.FromArgb(52, 64, 80);
             dgvSales.ThemeStyle.AlternatingRowsStyle.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -514,13 +532,14 @@
             panelStatistics.Controls.Add(cAnalytics);
             panelStatistics.CustomizableEdges = customizableEdges19;
             panelStatistics.FillColor = Color.Transparent;
-            panelStatistics.Location = new Point(361, 294);
+            panelStatistics.Location = new Point(316, 220);
+            panelStatistics.Margin = new Padding(3, 2, 3, 2);
             panelStatistics.Name = "panelStatistics";
             panelStatistics.ShadowDecoration.BorderRadius = 100;
             panelStatistics.ShadowDecoration.CustomizableEdges = customizableEdges20;
             panelStatistics.ShadowDecoration.Depth = 255;
             panelStatistics.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            panelStatistics.Size = new Size(776, 423);
+            panelStatistics.Size = new Size(679, 317);
             panelStatistics.TabIndex = 56;
             panelStatistics.UseTransparentBackground = true;
             // 
@@ -530,9 +549,10 @@
             cAnalytics.BackgroundImageLayout = ImageLayout.None;
             chartFont1.FontName = "Arial";
             cAnalytics.Legend.LabelFont = chartFont1;
-            cAnalytics.Location = new Point(12, 18);
+            cAnalytics.Location = new Point(10, 14);
+            cAnalytics.Margin = new Padding(3, 2, 3, 2);
             cAnalytics.Name = "cAnalytics";
-            cAnalytics.Size = new Size(750, 392);
+            cAnalytics.Size = new Size(656, 294);
             cAnalytics.TabIndex = 0;
             chartFont2.FontName = "Arial";
             chartFont2.Size = 12;
@@ -565,9 +585,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(24, 18);
+            label2.Location = new Point(21, 14);
             label2.Name = "label2";
-            label2.Size = new Size(51, 23);
+            label2.Size = new Size(41, 19);
             label2.TabIndex = 55;
             label2.Text = "IOST";
             // 
@@ -579,32 +599,35 @@
             btnExitAnalytics.ImageOffset = new Point(0, 0);
             btnExitAnalytics.ImageRotate = 0F;
             btnExitAnalytics.ImageSize = new Size(24, 24);
-            btnExitAnalytics.Location = new Point(1108, 14);
+            btnExitAnalytics.Location = new Point(970, 10);
+            btnExitAnalytics.Margin = new Padding(3, 2, 3, 2);
             btnExitAnalytics.Name = "btnExitAnalytics";
             btnExitAnalytics.PressedState.ImageSize = new Size(64, 64);
             btnExitAnalytics.ShadowDecoration.CustomizableEdges = customizableEdges21;
-            btnExitAnalytics.Size = new Size(29, 30);
+            btnExitAnalytics.Size = new Size(25, 22);
             btnExitAnalytics.TabIndex = 54;
+            btnExitAnalytics.Click += btnExitAnalytics_Click;
             // 
             // label3
             // 
             label3.BackColor = SystemColors.ButtonFace;
             label3.ForeColor = SystemColors.ButtonFace;
-            label3.Location = new Point(15, 52);
+            label3.Location = new Point(13, 39);
             label3.Name = "label3";
-            label3.Size = new Size(1133, 1);
+            label3.Size = new Size(991, 1);
             label3.TabIndex = 53;
             // 
             // AnalyticsView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(1356, 747);
+            ClientSize = new Size(1186, 560);
             Controls.Add(guna2GradientPanel3);
             Controls.Add(guna2GradientPanel2);
             ForeColor = Color.Transparent;
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "AnalyticsView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AnalyticsView";

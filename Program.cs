@@ -40,6 +40,15 @@ namespace projectIost
             // MainForm will be resolved by DI
             builder.Services.AddScoped<LoginView>();
 
+            builder.Services.AddScoped<RegisterView>();
+
+            builder.Services.AddScoped<SupplyView>();
+
+            builder.Services.AddScoped<OrderView>();
+
+            builder.Services.AddScoped<AnalyticsView>();
+
+
             var host = builder.Build();
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
