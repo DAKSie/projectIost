@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace projectIost.Models
 {
+    [Table("supply_details")] // ADD THIS
     public class Supply_Details
     {
         [Key]
@@ -16,6 +12,8 @@ namespace projectIost.Models
 
         [ForeignKey("Supply_id")]
         public Supply Supply { get; set; } = null!;
+
+        public int Item_id { get; set; } // ADD THIS - Foreign key property was missing!
 
         [ForeignKey("Item_id")]
         public Item Item { get; set; } = null!;

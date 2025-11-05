@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace projectIost.Models
 {
+    [Table("item")] // ADD THIS
     public class Item
     {
         [Key]

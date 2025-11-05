@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Collections.Generic;
 
 namespace projectIost.Models
 {
+    [Table("order_details")] // ADD THIS
     public class Order_Details
     {
         [Key]
@@ -18,7 +13,7 @@ namespace projectIost.Models
         [ForeignKey("Order_id")]
         public Order Order { get; set; } = null!;
 
-        public int Item_id {  get; set; }
+        public int Item_id { get; set; }
         [ForeignKey("Item_id")]
         public Item Item { get; set; } = null!;
 

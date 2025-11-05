@@ -17,6 +17,7 @@ namespace projectIost
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
+        public static IServiceProvider ServiceProvider { get; private set; }
         [STAThread]
         static void Main()
         {
@@ -50,7 +51,7 @@ namespace projectIost
 
 
             var host = builder.Build();
-
+            ServiceProvider = host.Services;
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
