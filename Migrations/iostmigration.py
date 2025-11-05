@@ -1,27 +1,30 @@
 ﻿import mysql.connector
 from mysql.connector import Error
 
+# Database configuration - easily changeable
+DB_CONFIG = {
+    'host': 'localhost',
+    'user': 'root',  # Default XAMPP MySQL username
+    'password': '',  # Default XAMPP MySQL password (usually empty)
+    'port': 3306,    # Default MySQL port
+    'database_name': 'iostdb'  # Database name variable
+}
+
 def create_database():
     """Create the database and tables based on the ERD"""
-    
-    # Database connection configuration
-    config = {
-        'host': 'localhost',
-        'user': 'root',  # Default XAMPP MySQL username
-        'password': '',  # Default XAMPP MySQL password (usually empty)
-        'port': 3306     # Default MySQL port
-    }
     
     connection = None
     cursor = None
     
     try:
-        # Connect to MySQL server
-        connection = mysql.connector.connect(**config)
+        # Connect to MySQL server (without database)
+        config_no_db = DB_CONFIG.copy()
+        config_no_db.pop('database_name', None)
+        connection = mysql.connector.connect(**config_no_db)
         cursor = connection.cursor()
         
-        # Create database
-        database_name = "iostdb"
+        # Create database using the variable
+        database_name = DB_CONFIG['database_name']
         cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database_name}")
         cursor.execute(f"USE {database_name}")
         print(f"Database '{database_name}' created/selected successfully")
@@ -146,13 +149,8 @@ def create_database():
 def test_connection():
     """Test the database connection and display table info"""
     
-    config = {
-        'host': 'localhost',
-        'user': 'root',
-        'password': '',
-        'database': 'inventory_management',
-        'port': 3306
-    }
+    config = DB_CONFIG.copy()
+    config['database'] = config.pop('database_name')  # Use the database name variable
     
     try:
         connection = mysql.connector.connect(**config)
@@ -162,6 +160,8 @@ def test_connection():
         tables = cursor.fetchall()
         
         print("\nDatabase Structure:")
+        print("=" * 50)
+        print(f"Database: {DB_CONFIG['database_name']}")
         print("=" * 50)
         
         for table in tables:
@@ -182,10 +182,33 @@ def test_connection():
     except Error as e:
         print(f"Connection test error: {e}")
 
+def drop_database():
+    """Drop the database (for testing purposes)"""
+    
+    config_no_db = DB_CONFIG.copy()
+    database_name = config_no_db.pop('database_name')
+    
+    try:
+        connection = mysql.connector.connect(**config_no_db)
+        cursor = connection.cursor()
+        
+        cursor.execute(f"DROP DATABASE IF EXISTS {database_name}")
+        print(f"Database '{database_name}' dropped successfully")
+        
+        cursor.close()
+        connection.close()
+        
+    except Error as e:
+        print(f"Error dropping database: {e}")
+
 if __name__ == "__main__":
     print("Starting database migration...")
     print("Make sure XAMPP MySQL is running!")
+    print(f"Database name: {DB_CONFIG['database_name']}")
     print("-" * 50)
+    
+    # Uncomment the line below if you want to drop and recreate the database
+    # drop_database()
     
     create_database()
     
