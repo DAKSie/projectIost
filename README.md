@@ -69,9 +69,9 @@
 
 - **DAKSie** ([GitHub Profile](https://github.com/DAKSie))
   - Main author, Bakend developer and maintainer.
-- **DAKSie** ([GitHub Profile](https://github.com/joshuafrellte))
+- **joshuafrellte** ([GitHub Profile](https://github.com/joshuafrellte))
   - Co-author, Full-stack.
-- **DAKSie** ([GitHub Profile](https://github.com/Hakari716))
+- **Hakari716** ([GitHub Profile](https://github.com/Hakari716))
   - Co-author, Front-end.
 ---
 
