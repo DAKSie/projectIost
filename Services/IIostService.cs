@@ -16,5 +16,7 @@ namespace projectIost.Services
 
         Task DeleteItemAsync(int id);
         Task DeleteUserAsync(int id);
+
+        Task<User?> AuthenticateUserAsync(string username, string password);
     }
 }

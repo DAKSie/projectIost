@@ -124,7 +124,6 @@
             guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges24;
             guna2GradientPanel2.Size = new Size(1163, 748);
             guna2GradientPanel2.TabIndex = 1;
-            guna2GradientPanel2.Paint += guna2GradientPanel2_Paint;
             // 
             // label2
             // 
@@ -133,7 +132,7 @@
             label2.ForeColor = Color.White;
             label2.Location = new Point(27, 16);
             label2.Name = "label2";
-            label2.Size = new Size(51, 23);
+            label2.Size = new Size(41, 19);
             label2.TabIndex = 14;
             label2.Text = "IOST";
             // 
@@ -151,6 +150,7 @@
             btnExit.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btnExit.Size = new Size(29, 30);
             btnExit.TabIndex = 13;
+            btnExit.Click += btnExit_Click;
             // 
             // btnSearch
             // 
@@ -208,7 +208,6 @@
             btnAdd.Size = new Size(74, 35);
             btnAdd.TabIndex = 10;
             btnAdd.Text = "ADD";
-            btnAdd.Click += guna2Button4_Click;
             // 
             // btnClear
             // 
@@ -269,7 +268,6 @@
             btnDel.Size = new Size(77, 35);
             btnDel.TabIndex = 7;
             btnDel.Text = "DELETE";
-            btnDel.Click += guna2Button1_Click;
             // 
             // txtRetailPrice
             // 
@@ -446,6 +444,7 @@
             btnLogout2.ShadowDecoration.CustomizableEdges = customizableEdges25;
             btnLogout2.Size = new Size(29, 30);
             btnLogout2.TabIndex = 45;
+            btnLogout2.Click += btnLogout2_Click;
             // 
             // btnInventory
             // 
@@ -497,6 +496,7 @@
             btnAnalytics.Size = new Size(185, 47);
             btnAnalytics.TabIndex = 23;
             btnAnalytics.Text = "ANALYTICS";
+            btnAnalytics.Click += btnAnalytics_Click;
             // 
             // btnOrder
             // 
@@ -514,6 +514,7 @@
             btnOrder.Size = new Size(185, 47);
             btnOrder.TabIndex = 22;
             btnOrder.Text = "ORDER";
+            btnOrder.Click += btnOrder_Click;
             // 
             // btnSupply
             // 
@@ -531,6 +532,7 @@
             btnSupply.Size = new Size(185, 47);
             btnSupply.TabIndex = 21;
             btnSupply.Text = "SUPPLY";
+            btnSupply.Click += btnSupply_Click;
             // 
             // label9
             // 
@@ -560,7 +562,7 @@
             // 
             // InventoryView
             // 
-            AutoScaleDimensions = new SizeF(12F, 23F);
+            AutoScaleDimensions = new SizeF(10F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1356, 747);
@@ -571,7 +573,6 @@
             Name = "InventoryView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "InventoryView";
-            Load += InventoryView_Load;
             guna2GradientPanel2.ResumeLayout(false);
             guna2GradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvInventory).EndInit();

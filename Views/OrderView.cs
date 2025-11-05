@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectIost.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,31 +11,73 @@ using System.Windows.Forms;
 
 namespace projectIost.Views
 {
+
     public partial class OrderView : Form
     {
+        private readonly IIostService? _service;
+
+        private InventoryView _inventoryView;
+
+        private SupplyView _supplyView;
+
+        private AnalyticsView _analyticsView;
+
+        private LoginView _loginView;
         public OrderView()
         {
             InitializeComponent();
         }
 
-        private void splitContainer3_SplitterMoved(object sender, SplitterEventArgs e)
+
+        private void btnInventory_Click(object sender, EventArgs e)
         {
+            if (_inventoryView == null || _inventoryView.IsDisposed)
+            {
+                _inventoryView = new InventoryView();
+            }
+            this.Hide();
+            _inventoryView.ShowDialog();
+            _inventoryView.BringToFront();
+        }
+
+        private void btnSupply_Click(object sender, EventArgs e)
+        {
+            if (_supplyView == null || _supplyView.IsDisposed)
+            {
+                _supplyView = new SupplyView();
+            }
+            this.Hide();
+            _supplyView.Show();
+            _supplyView.BringToFront();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            if (_analyticsView == null || _analyticsView.IsDisposed)
+            {
+                _analyticsView = new AnalyticsView();
+            }
+            this.Hide();
+            _analyticsView.ShowDialog();
+            _analyticsView.BringToFront();
 
         }
 
-        private void splitContainer1_SplitterMoved(object sender, SplitterEventArgs e)
-        {
 
+        private void btnExitOrder_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnLogout2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
+            if (_loginView == null || _loginView.IsDisposed)
+            {
+                _loginView = new LoginView(_service);
+            }
+            this.Hide();
+            _loginView.ShowDialog();
+            _loginView.BringToFront();
         }
     }
 }

@@ -15,6 +15,14 @@ namespace projectIost.Views
         // Use a BindingSource so the DataGridView can be refreshed/managed easily.
         private readonly BindingSource _bindingSource = new();
 
+        private SupplyView _supplyView;
+
+        private OrderView _orderView;
+
+        private AnalyticsView _analyticsView;
+
+        private LoginView _loginView;
+
         // Parameterless ctor kept for WinForms Designer.
         public InventoryView()
         {
@@ -31,6 +39,9 @@ namespace projectIost.Views
             // Populate inputs when user selects a row.
             dgvInventory.SelectionChanged += dgvInventory_SelectionChanged;
             dgvInventory.CellDoubleClick += dgvInventory_CellDoubleClick;
+
+
+
 
 
         }
@@ -230,8 +241,6 @@ namespace projectIost.Views
             await LoadItemsAsync();
         }
 
-
-
         // Fill input controls from the currently selected grid row (if any)
         private void dgvInventory_SelectionChanged(object? sender, EventArgs e)
         {
@@ -276,34 +285,53 @@ namespace projectIost.Views
             ClearInputs();
         }
 
-        private void InventoryView_Load(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
+        private void btnSupply_Click(object sender, EventArgs e)
         {
-
+            if (_supplyView == null || _supplyView.IsDisposed)
+            {
+                _supplyView = new SupplyView();
+            }
+            this.Hide();
+            _supplyView.Show();
+            _supplyView.BringToFront();
         }
 
-        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        private void btnOrder_Click(object sender, EventArgs e)
         {
-
+            if (_orderView == null || _orderView.IsDisposed)
+            {
+                _orderView = new OrderView();
+            }
+            this.Hide();
+            _orderView.ShowDialog();
+            _orderView.BringToFront();
         }
 
-        private void guna2Button4_Click(object sender, EventArgs e)
+        private void btnAnalytics_Click(object sender, EventArgs e)
         {
-
+            if (_analyticsView == null || _analyticsView.IsDisposed)
+            {
+                _analyticsView = new AnalyticsView();
+            }
+            this.Hide();
+            _analyticsView.ShowDialog();
+            _analyticsView.BringToFront();
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnLogout2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            if (_loginView == null || _loginView.IsDisposed)
+            {
+                _loginView = new LoginView(_service);
+            }
+            this.Hide();
+            _loginView.ShowDialog();
+            _loginView.BringToFront();
         }
     }
 }

@@ -16,18 +16,51 @@ namespace projectIost.Views
     public partial class LoginView : Form
     {
         private readonly IIostService _service;
-        private readonly InventoryView _inventoryView;
-        public LoginView(IIostService service, InventoryView inventoryView)
+        private InventoryView _inventoryView;
+        private RegisterView _registerView;
+        public LoginView(IIostService service)
         {
             _service = service;
-            _inventoryView = inventoryView;
+            
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //string username = txtUser.Text.Trim();
+            //string password = txtPass.Text;
+
+            //var user = await _service.AuthenticateUserAsync(username, password);
+            
+            if (_inventoryView == null || _inventoryView.IsDisposed)
+            {
+                _inventoryView = new InventoryView();
+            }
             this.Hide();
-            _inventoryView.Show();
+            _inventoryView.ShowDialog();
+            _inventoryView.BringToFront();
+            
+
+        }
+
+        private void btnExitLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            
+            if (_registerView == null || _registerView.IsDisposed)
+            {
+                _registerView = new RegisterView();
+            }
+            this.Hide();
+            
+            _registerView.ShowDialog();
+            _registerView.BringToFront();
+            
+
         }
     }
 }
