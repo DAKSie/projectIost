@@ -34,10 +34,10 @@ namespace projectIost.Views
             
             if (_inventoryView == null || _inventoryView.IsDisposed)
             {
-                _inventoryView = new InventoryView();
+                _inventoryView = new InventoryView(_service);
             }
             this.Hide();
-            _inventoryView.ShowDialog();
+            _inventoryView.Show();
             _inventoryView.BringToFront();
             
 
