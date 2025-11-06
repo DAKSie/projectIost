@@ -27,6 +27,7 @@ namespace projectIost.Views
         public SupplyView()
         {
             InitializeComponent();
+            _service = Program.ServiceProvider.GetRequiredService<IIostService>();
             SetupDGV();
         }
 
@@ -60,6 +61,7 @@ namespace projectIost.Views
                 {
                     dgvSupply1.AutoGenerateColumns = false;
                     dgvSupply1.Columns.Clear();
+                    dgvSupply1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                     // manually added columns
                     dgvSupply1.Columns.Add(new DataGridViewTextBoxColumn
@@ -121,6 +123,7 @@ namespace projectIost.Views
                 {
                     dgvSupplyMaster.AutoGenerateColumns = false;
                     dgvSupplyMaster.Columns.Clear();
+                    dgvSupplyMaster.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                     dgvSupplyMaster.Columns.Add(new DataGridViewTextBoxColumn
                     {
@@ -169,6 +172,7 @@ namespace projectIost.Views
                 {
                     dgvSupply3.AutoGenerateColumns = false;
                     dgvSupply3.Columns.Clear();
+                    dgvSupply3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                     // manually added columns
                     dgvSupply3.Columns.Add(new DataGridViewTextBoxColumn
@@ -251,14 +255,14 @@ namespace projectIost.Views
             {
                 // load sequentially, not concurrently
                 await LoadInventoryAsync();
-                await LoadSuppliesAsync(); 
+                await LoadSuppliesAsync();
 
                 if (_supplyMasterBindingSource.Count > 0)
                 {
                     var first = _supplyMasterBindingSource[0] as Supply;
                     if (first != null)
                     {
-                        await LoadSupplyDetailsAsync(first.Supply_id); 
+                        await LoadSupplyDetailsAsync(first.Supply_id);
                     }
                 }
             }
@@ -268,15 +272,44 @@ namespace projectIost.Views
             }
         }
 
+        private void NavigateTo<T>() where T : Form
+        {
+            var form = Program.ServiceProvider.GetRequiredService<T>();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            NavigateTo<InventoryView>();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            NavigateTo<OrderView>();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            NavigateTo<AnalyticsView>();
+        }
+
+        private void btnLogout2_Click(object sender, EventArgs e)
+        {
+            NavigateTo<LoginView>();
+        }
+
+        /*
         private void btnInventory_Click(object sender, EventArgs e)
         {
             if (_inventoryView == null || _inventoryView.IsDisposed)
             {
                 _inventoryView = Program.ServiceProvider.GetRequiredService<InventoryView>();
             }
-            this.Hide();
+           
             _inventoryView.Show();
-            _inventoryView.BringToFront();
+            _inventoryView.BringToFront(); 
+            this.Dispose();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -285,9 +318,10 @@ namespace projectIost.Views
             {
                 _orderView = Program.ServiceProvider.GetRequiredService<OrderView>();
             }
-            this.Hide();
+           
             _orderView.Show();
             _orderView.BringToFront();
+            this.Dispose();
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
@@ -296,14 +330,10 @@ namespace projectIost.Views
             {
                 _analyticsView = Program.ServiceProvider.GetRequiredService<AnalyticsView>();
             }
-            this.Hide();
+            
             _analyticsView.Show();
             _analyticsView.BringToFront();
-        }
-
-        private void btnExitSupply_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            this.Dispose();
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)
@@ -312,9 +342,16 @@ namespace projectIost.Views
             {
                 _loginView = new LoginView(_service);
             }
-            this.Hide();
+            
             _loginView.ShowDialog();
             _loginView.BringToFront();
+            this.Dispose();
+        }
+        */
+
+        private void btnExitSupply_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private async void btnAddSupply_Click(object sender, EventArgs e)
@@ -348,8 +385,8 @@ namespace projectIost.Views
                 {
                     Date = supplyDate,
                     Supplier = txtSupplier.Text.Trim(),
-                    Total = 0, 
-                    User_id = 1 
+                    Total = 0,
+                    User_id = 1
                 };
 
                 await _service.AddSupplyAsync(newSupply);

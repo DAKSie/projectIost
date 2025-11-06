@@ -26,19 +26,54 @@ namespace projectIost.Views
         public AnalyticsView()
         {
             InitializeComponent();
+            _service = Program.ServiceProvider.GetRequiredService<IIostService>();
             gunaScrollBar.BindingContainer = dgvSales;
             gunaScrollBar.AutoScroll = true;
         }
 
+        private void NavigateTo<T>() where T : Form
+        {
+            var form = Program.ServiceProvider.GetRequiredService<T>();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            NavigateTo<InventoryView>();
+        }
+
+        private void btnSupply_Click(object sender, EventArgs e)
+        {
+            NavigateTo<SupplyView>();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            NavigateTo<OrderView>();
+        }
+
+        private void btnLogout2_Click(object sender, EventArgs e)
+        {
+            NavigateTo<LoginView>();
+        }
+
+        private void btnExitAnalytics_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /*
         private void btnInventory_Click(object sender, EventArgs e)
         {
             if (_inventoryView == null || _inventoryView.IsDisposed)
             {
                 _inventoryView = Program.ServiceProvider.GetRequiredService<InventoryView>();
             }
-            this.Hide();
+            
             _inventoryView.Show();
             _inventoryView.BringToFront();
+            this.Dispose();
         }
 
         private void btnSupply_Click(object sender, EventArgs e)
@@ -47,9 +82,10 @@ namespace projectIost.Views
             {
                 _supplyView = Program.ServiceProvider.GetRequiredService<SupplyView>();
             }
-            this.Hide();
+            
             _supplyView.Show();
             _supplyView.BringToFront();
+            this.Dispose();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -58,15 +94,13 @@ namespace projectIost.Views
             {
                 _orderView = Program.ServiceProvider.GetRequiredService<OrderView>();
             }
-            this.Hide();
+            
             _orderView.Show();
             _orderView.BringToFront();
+            this.Dispose();
         }
 
-        private void btnExitAnalytics_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        
 
         private void btnLogout2_Click(object sender, EventArgs e)
         {
@@ -74,9 +108,11 @@ namespace projectIost.Views
             {
                 _loginView = new LoginView(_service);
             }
-            this.Hide();
+           
             _loginView.ShowDialog();
             _loginView.BringToFront();
+            this.Dispose();
         }
+        */
     }
 }

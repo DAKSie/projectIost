@@ -107,7 +107,7 @@ namespace projectIost.Services
                 .Include(o => o.User)
                 .Include(o => o.OrderDetails)
                     .ThenInclude(od => od.Item)
-                .FirstOrDefaultAsync(o => o.Order_id == id);
+                .FirstOrDefaultAsync(o => o.Order_number == id);
         }
 
         public async Task AddOrderAsync(Order order)

@@ -27,6 +27,7 @@ namespace projectIost.Views
         public OrderView()
         {
             InitializeComponent();
+            _service = Program.ServiceProvider.GetRequiredService<IIostService>();
             SetupDGV();
         }
 
@@ -56,13 +57,12 @@ namespace projectIost.Views
             {
                 var items = await _service.GetAllItemsAsync();
 
-                // manual binding for control
                 dgvInventory.Invoke((MethodInvoker)delegate
                 {
                     dgvInventory.AutoGenerateColumns = false;
                     dgvInventory.Columns.Clear();
+                    dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                    // manually added columns
                     dgvInventory.Columns.Add(new DataGridViewTextBoxColumn
                     {
                         DataPropertyName = "Item_id",
@@ -122,11 +122,11 @@ namespace projectIost.Views
                 {
                     dgvOrderMaster.AutoGenerateColumns = false;
                     dgvOrderMaster.Columns.Clear();
+                    dgvOrderMaster.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                    // update DataPropertyName to match new property name
                     dgvOrderMaster.Columns.Add(new DataGridViewTextBoxColumn
                     {
-                        DataPropertyName = "Order_id",  
+                        DataPropertyName = "Order_number",
                         HeaderText = "Order ID",
                         Width = 70
                     });
@@ -171,8 +171,8 @@ namespace projectIost.Views
                 {
                     dgvOrderDetails.AutoGenerateColumns = false;
                     dgvOrderDetails.Columns.Clear();
+                    dgvOrderDetails.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-                    // manually added columns
                     dgvOrderDetails.Columns.Add(new DataGridViewTextBoxColumn
                     {
                         DataPropertyName = "Order_Detail_id",
@@ -224,13 +224,18 @@ namespace projectIost.Views
         {
             if (dgvOrderMaster.CurrentRow?.DataBoundItem is Order selectedOrder)
             {
-                // fill text text fields with order info
-                txtOrderID.Text = selectedOrder.Order_id.ToString();
+                txtOrderID.Text = selectedOrder.Order_number.ToString();
                 txtOrderDate.Text = selectedOrder.Date.ToString("yyyy-MM-dd");
                 txtCustomerName.Text = selectedOrder.Customer;
 
-                // load order details for selected order
-                await LoadOrderDetailsAsync(selectedOrder.Order_id);
+                try
+                {
+                    await LoadOrderDetailsAsync(selectedOrder.Order_number);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Failed to load order details: {ex.Message}");
+                }
             }
         }
 
@@ -240,21 +245,20 @@ namespace projectIost.Views
             await LoadAllDataAsync();
         }
 
-
         private async Task LoadAllDataAsync()
         {
             try
             {
                 // load sequentially, not concurrently
                 await LoadInventoryAsync();
-                await LoadOrdersAsync(); 
+                await LoadOrdersAsync();
 
                 if (_orderMasterBindingSource.Count > 0)
                 {
-                    var first = _orderMasterBindingSource[0] as Order; 
+                    var first = _orderMasterBindingSource[0] as Order;
                     if (first != null)
                     {
-                        await LoadOrderDetailsAsync(first.Order_id); 
+                        await LoadOrderDetailsAsync(first.Order_number);
                     }
                 }
             }
@@ -264,15 +268,44 @@ namespace projectIost.Views
             }
         }
 
+        private void NavigateTo<T>() where T : Form
+        {
+            var form = Program.ServiceProvider.GetRequiredService<T>();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnInventory_Click(object sender, EventArgs e)
+        {
+            NavigateTo<InventoryView>();
+        }
+
+        private void btnSupply_Click(object sender, EventArgs e)
+        {
+            NavigateTo<SupplyView>();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            NavigateTo<AnalyticsView>();
+        }
+
+        private void btnLogout2_Click(object sender, EventArgs e)
+        {
+            NavigateTo<LoginView>();
+        }
+
+        /*
         private void btnInventory_Click(object sender, EventArgs e)
         {
             if (_inventoryView == null || _inventoryView.IsDisposed)
             {
                 _inventoryView = Program.ServiceProvider.GetRequiredService<InventoryView>();
             }
-            this.Hide();
+            
             _inventoryView.Show();
             _inventoryView.BringToFront();
+            this.Dispose();
         }
 
         private void btnSupply_Click(object sender, EventArgs e)
@@ -281,9 +314,10 @@ namespace projectIost.Views
             {
                 _supplyView = Program.ServiceProvider.GetRequiredService<SupplyView>();
             }
-            this.Hide();
+           
             _supplyView.Show();
             _supplyView.BringToFront();
+            this.Dispose();
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
@@ -292,14 +326,10 @@ namespace projectIost.Views
             {
                 _analyticsView = Program.ServiceProvider.GetRequiredService<AnalyticsView>();
             }
-            this.Hide();
+
             _analyticsView.Show();
             _analyticsView.BringToFront();
-        }
-
-        private void btnExitOrder_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            this.Dispose();
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)
@@ -308,9 +338,16 @@ namespace projectIost.Views
             {
                 _loginView = new LoginView(_service);
             }
-            this.Hide();
+            
             _loginView.ShowDialog();
             _loginView.BringToFront();
+            this.Dispose();
+        }
+        */
+
+        private void btnExitOrder_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private async void btnAddOrder_Click(object sender, EventArgs e)
@@ -321,7 +358,7 @@ namespace projectIost.Views
                 return;
             }
 
-            // validate input
+            // input validation
             if (string.IsNullOrWhiteSpace(txtCustomerName.Text) || string.IsNullOrWhiteSpace(txtOrderDate.Text))
             {
                 MessageBox.Show("Please enter Customer Name and Date", "Validation Error",
@@ -344,9 +381,10 @@ namespace projectIost.Views
                 {
                     Date = orderDate,
                     Customer = txtCustomerName.Text.Trim(),
-                    Total = 0, // calculated when items are added
+                    Total = 0,
+                    User_id = 1
                 };
-
+                Console.WriteLine("DEBUG DEBUG DEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG");
                 await _service.AddOrderAsync(newOrder);
 
                 MessageBox.Show("Order created successfully!", "Success",
@@ -360,8 +398,10 @@ namespace projectIost.Views
             }
             catch (Exception ex)
             {
+                Console.WriteLine("LAKHSDFASDJKLSDFSKJLLSD" + ex.InnerException?.Message);
                 MessageBox.Show($"Failed to add order: {ex.Message}", "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
             }
         }
 
@@ -432,7 +472,7 @@ namespace projectIost.Views
             txtOrderID.Clear();
             txtOrderDate.Clear();
             txtCustomerName.Clear();
-            txtQuantityOrder.Clear(); 
+            txtQuantityOrder.Clear();
 
             _orderDetailBindingSource.DataSource = new BindingList<Order_Details>();
         }
@@ -455,7 +495,7 @@ namespace projectIost.Views
                     return;
                 }
 
-                // confirm delete
+                // confirm deletion
                 var result = MessageBox.Show(
                     $"Are you sure you want to delete order #{orderId}? This will also delete all order details.",
                     "Confirm Delete",
@@ -467,7 +507,7 @@ namespace projectIost.Views
                     // delete order details
                     await _service.DeleteOrderDetailsByOrderIdAsync(orderId);
 
-                    // then delete order
+                    // then delete the order
                     await _service.DeleteOrderAsync(orderId);
 
                     MessageBox.Show("Order deleted successfully!", "Success",
@@ -500,7 +540,7 @@ namespace projectIost.Views
 
             try
             {
-                // check stock
+                // **KEY DIFFERENCE FROM SUPPLY: Check stock availability**
                 if (quantity > selectedItem.Item_quantity)
                 {
                     MessageBox.Show($"Only {selectedItem.Item_quantity} available");
@@ -513,13 +553,13 @@ namespace projectIost.Views
                     Order_id = orderId,
                     Item_id = selectedItem.Item_id,
                     Quantity = quantity,
-                    Price = selectedItem.Item_price,
+                    Price = selectedItem.Item_price, // Use selling price for orders
                     Subtotal = selectedItem.Item_price * quantity
                 };
 
                 await _service.AddOrderDetailAsync(orderDetail);
 
-                // update inventory
+                // **KEY DIFFERENCE FROM SUPPLY: Subtract from inventory**
                 selectedItem.Item_quantity -= quantity;
                 await _service.UpdateItemAsync(selectedItem);
 
@@ -532,7 +572,7 @@ namespace projectIost.Views
                     await _service.UpdateOrderAsync(order);
                 }
 
-                // refresh UI
+                // refresh UI 
                 await LoadInventoryAsync();
                 await LoadOrdersAsync();
                 await LoadOrderDetailsAsync(orderId);
@@ -544,24 +584,6 @@ namespace projectIost.Views
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-        }
-
-        private async Task UpdateOrderTotal(int orderId)
-        {
-            var order = await _service.GetOrderByIdAsync(orderId);
-            if (order != null)
-            {
-                var details = await _service.GetOrderDetailsByOrderIdAsync(orderId);
-                order.Total = details.Sum(od => od.Subtotal);
-                await _service.UpdateOrderAsync(order);
-            }
-        }
-
-        private async Task RefreshData(int orderId)
-        {
-            await LoadInventoryAsync();
-            await LoadOrdersAsync();
-            await LoadOrderDetailsAsync(orderId);
         }
 
         private async void btnRemoveItem_Click(object sender, EventArgs e)
@@ -576,16 +598,16 @@ namespace projectIost.Views
 
             try
             {
-                // get item to restore inventory
+                // get the item to adjust inventory
                 var item = await _service.GetItemByIdAsync(selectedDetail.Item_id);
                 if (item != null)
                 {
-                    // add quantity back to inventory
+                    // **KEY DIFFERENCE FROM SUPPLY: Add quantity back to inventory**
                     item.Item_quantity += selectedDetail.Quantity;
                     await _service.UpdateItemAsync(item);
                 }
 
-                // remove order detail
+                // remove the order detail
                 await _service.DeleteOrderDetailAsync(selectedDetail.Order_Detail_id);
 
                 // update order total

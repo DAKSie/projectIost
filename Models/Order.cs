@@ -8,8 +8,8 @@ namespace projectIost.Models
     public class Order
     {
         [Key]
-        [Column("order_number")] // Map to the correct column name
-        public int Order_id { get; set; }
+        [Column("order_number")] 
+        public int Order_number { get; set; }
 
         [Column("date")]
         public DateTime Date { get; set; }
