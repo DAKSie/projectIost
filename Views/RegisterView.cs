@@ -11,10 +11,11 @@ namespace projectIost.Views
         private readonly IIostService _service;
         private LoginView _loginView;
 
-        public RegisterView(IIostService service)
+        public RegisterView()
         {
-            _service = service;
             InitializeComponent();
+            _service = Program.ServiceProvider.GetRequiredService<IIostService>();
+            
 
             // Make password textbox hide characters
             txtCPassword.UseSystemPasswordChar = true;

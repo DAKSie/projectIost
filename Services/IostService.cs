@@ -1,82 +1,105 @@
-﻿using projectIost.Services;
-using Microsoft.EntityFrameworkCore;
-using projectIost.Data;
+﻿using projectIost.Data;
 using projectIost.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace projectIost.Services
 {
     public class IostService : IIostService
     {
-        private readonly IostDbContext _context;
+        private readonly IServiceProvider _serviceProvider;
 
-        public IostService(IostDbContext context)
+        public IostService(IServiceProvider serviceProvider)
         {
-            _context = context;
+            _serviceProvider = serviceProvider;
         }
+
+        // REMOVE the CreateNewContext method and using statements
+        // Let DI manage the context lifetime
 
         // ========== ITEM METHODS ==========
         public async Task<List<Item>> GetAllItemsAsync()
         {
-            return await _context.Items.ToListAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Items.AsNoTracking().ToListAsync();
         }
 
         public async Task<Item?> GetItemByIdAsync(int id)
         {
-            return await _context.Items.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Items.AsNoTracking().FirstOrDefaultAsync(i => i.Item_id == id);
         }
 
         public async Task AddItemAsync(Item item)
         {
-            _context.Items.Add(item);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Items.Add(item);
+            await context.SaveChangesAsync();
         }
 
         public async Task UpdateItemAsync(Item item)
         {
-            _context.Items.Update(item);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Items.Update(item);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteItemAsync(int id)
         {
-            var item = await _context.Items.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var item = await context.Items.FindAsync(id);
             if (item != null)
             {
-                _context.Items.Remove(item);
-                await _context.SaveChangesAsync();
+                context.Items.Remove(item);
+                await context.SaveChangesAsync();
             }
         }
 
         // ========== USER METHODS ==========
         public async Task<List<User>> GetAllUsersAsync()
         {
-            return await _context.Users.ToListAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Users.AsNoTracking().ToListAsync();
         }
 
         public async Task<User?> GetUserByIdAsync(int id)
         {
-            return await _context.Users.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.User_id == id);
         }
 
         public async Task AddUserAsync(User user)
         {
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Users.Add(user);
+            await context.SaveChangesAsync();
         }
 
         public async Task UpdateUserAsync(User user)
         {
-            _context.Users.Update(user);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Users.Update(user);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteUserAsync(int id)
         {
-            var user = await _context.Users.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var user = await context.Users.FindAsync(id);
             if (user != null)
             {
-                _context.Users.Remove(user);
-                await _context.SaveChangesAsync();
+                context.Users.Remove(user);
+                await context.SaveChangesAsync();
             }
         }
 
@@ -85,7 +108,10 @@ namespace projectIost.Services
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 return null;
 
-            var user = await _context.Users
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var user = await context.Users
+                .AsNoTracking()
                 .FirstOrDefaultAsync(u => u.User_name == username && u.User_password == password);
 
             return user;
@@ -94,216 +120,278 @@ namespace projectIost.Services
         // ========== ORDER METHODS ==========
         public async Task<List<Order>> GetAllOrdersAsync()
         {
-            return await _context.Orders
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Orders
                 .Include(o => o.User)
                 .Include(o => o.OrderDetails)
                     .ThenInclude(od => od.Item)
+                .AsNoTracking()
                 .ToListAsync();
         }
 
         public async Task<Order?> GetOrderByIdAsync(int id)
         {
-            return await _context.Orders
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Orders
                 .Include(o => o.User)
                 .Include(o => o.OrderDetails)
                     .ThenInclude(od => od.Item)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(o => o.Order_number == id);
         }
 
         public async Task AddOrderAsync(Order order)
         {
-            _context.Orders.Add(order);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Orders.Add(order);
+            await context.SaveChangesAsync();
         }
 
         public async Task UpdateOrderAsync(Order order)
         {
-            _context.Orders.Update(order);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Orders.Update(order);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteOrderAsync(int id)
         {
-            var order = await _context.Orders.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var order = await context.Orders.FindAsync(id);
             if (order != null)
             {
-                _context.Orders.Remove(order);
-                await _context.SaveChangesAsync();
+                context.Orders.Remove(order);
+                await context.SaveChangesAsync();
             }
         }
 
         // ========== ORDER DETAILS METHODS ==========
         public async Task<List<Order_Details>> GetAllOrderDetailsAsync()
         {
-            return await _context.OrderDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.OrderDetails
                 .Include(od => od.Order)
                 .Include(od => od.Item)
+                .AsNoTracking()
                 .ToListAsync();
         }
 
         public async Task<Order_Details?> GetOrderDetailByIdAsync(int id)
         {
-            return await _context.OrderDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.OrderDetails
                 .Include(od => od.Order)
                 .Include(od => od.Item)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(od => od.Order_Detail_id == id);
         }
 
         public async Task<List<Order_Details>> GetOrderDetailsByOrderIdAsync(int orderId)
         {
-            return await _context.OrderDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.OrderDetails
                 .Include(od => od.Order)
                 .Include(od => od.Item)
+                .AsNoTracking()
                 .Where(od => od.Order_id == orderId)
                 .ToListAsync();
         }
 
         public async Task AddOrderDetailAsync(Order_Details orderDetail)
         {
-            _context.OrderDetails.Add(orderDetail);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.OrderDetails.Add(orderDetail);
+            await context.SaveChangesAsync();
         }
 
         public async Task AddOrderDetailsRangeAsync(List<Order_Details> orderDetails)
         {
-            _context.OrderDetails.AddRange(orderDetails);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.OrderDetails.AddRange(orderDetails);
+            await context.SaveChangesAsync();
         }
 
         public async Task UpdateOrderDetailAsync(Order_Details orderDetail)
         {
-            _context.OrderDetails.Update(orderDetail);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.OrderDetails.Update(orderDetail);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteOrderDetailAsync(int id)
         {
-            var orderDetail = await _context.OrderDetails.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var orderDetail = await context.OrderDetails.FindAsync(id);
             if (orderDetail != null)
             {
-                _context.OrderDetails.Remove(orderDetail);
-                await _context.SaveChangesAsync();
+                context.OrderDetails.Remove(orderDetail);
+                await context.SaveChangesAsync();
             }
         }
 
         public async Task DeleteOrderDetailsByOrderIdAsync(int orderId)
         {
-            var orderDetails = await _context.OrderDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var orderDetails = await context.OrderDetails
                 .Where(od => od.Order_id == orderId)
                 .ToListAsync();
 
             if (orderDetails.Any())
             {
-                _context.OrderDetails.RemoveRange(orderDetails);
-                await _context.SaveChangesAsync();
+                context.OrderDetails.RemoveRange(orderDetails);
+                await context.SaveChangesAsync();
             }
         }
 
         // ========== SUPPLY METHODS ==========
         public async Task<List<Supply>> GetAllSuppliesAsync()
         {
-            return await _context.Supplies
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Supplies
                 .Include(s => s.User)
                 .Include(s => s.SupplyDetails)
                     .ThenInclude(sd => sd.Item)
+                .AsNoTracking()
                 .ToListAsync();
         }
 
         public async Task<Supply?> GetSupplyByIdAsync(int id)
         {
-            return await _context.Supplies
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.Supplies
                 .Include(s => s.User)
                 .Include(s => s.SupplyDetails)
                     .ThenInclude(sd => sd.Item)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(s => s.Supply_id == id);
         }
 
         public async Task AddSupplyAsync(Supply supply)
         {
-            _context.Supplies.Add(supply);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Supplies.Add(supply);
+            await context.SaveChangesAsync();
         }
 
         public async Task UpdateSupplyAsync(Supply supply)
         {
-            _context.Supplies.Update(supply);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.Supplies.Update(supply);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteSupplyAsync(int id)
         {
-            var supply = await _context.Supplies.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var supply = await context.Supplies.FindAsync(id);
             if (supply != null)
             {
-                _context.Supplies.Remove(supply);
-                await _context.SaveChangesAsync();
+                context.Supplies.Remove(supply);
+                await context.SaveChangesAsync();
             }
         }
 
         // ========== SUPPLY DETAILS METHODS ==========
         public async Task<List<Supply_Details>> GetAllSupplyDetailsAsync()
         {
-            return await _context.SupplyDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.SupplyDetails
                 .Include(sd => sd.Supply)
                 .Include(sd => sd.Item)
+                .AsNoTracking()
                 .ToListAsync();
         }
 
         public async Task<Supply_Details?> GetSupplyDetailByIdAsync(int id)
         {
-            return await _context.SupplyDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.SupplyDetails
                 .Include(sd => sd.Supply)
                 .Include(sd => sd.Item)
+                .AsNoTracking()
                 .FirstOrDefaultAsync(sd => sd.Supply_Detail_id == id);
         }
 
         public async Task<List<Supply_Details>> GetSupplyDetailsBySupplyIdAsync(int supplyId)
         {
-            return await _context.SupplyDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            return await context.SupplyDetails
                 .Include(sd => sd.Supply)
                 .Include(sd => sd.Item)
+                .AsNoTracking()
                 .Where(sd => sd.Supply_id == supplyId)
                 .ToListAsync();
         }
 
         public async Task AddSupplyDetailAsync(Supply_Details supplyDetail)
         {
-            _context.SupplyDetails.Add(supplyDetail);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.SupplyDetails.Add(supplyDetail);
+            await context.SaveChangesAsync();
         }
 
         public async Task AddSupplyDetailsRangeAsync(List<Supply_Details> supplyDetails)
         {
-            _context.SupplyDetails.AddRange(supplyDetails);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.SupplyDetails.AddRange(supplyDetails);
+            await context.SaveChangesAsync();
         }
 
         public async Task UpdateSupplyDetailAsync(Supply_Details supplyDetail)
         {
-            _context.SupplyDetails.Update(supplyDetail);
-            await _context.SaveChangesAsync();
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            context.SupplyDetails.Update(supplyDetail);
+            await context.SaveChangesAsync();
         }
 
         public async Task DeleteSupplyDetailAsync(int id)
         {
-            var supplyDetail = await _context.SupplyDetails.FindAsync(id);
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var supplyDetail = await context.SupplyDetails.FindAsync(id);
             if (supplyDetail != null)
             {
-                _context.SupplyDetails.Remove(supplyDetail);
-                await _context.SaveChangesAsync();
+                context.SupplyDetails.Remove(supplyDetail);
+                await context.SaveChangesAsync();
             }
         }
 
         public async Task DeleteSupplyDetailsBySupplyIdAsync(int supplyId)
         {
-            var supplyDetails = await _context.SupplyDetails
+            using var scope = _serviceProvider.CreateScope();
+            var context = scope.ServiceProvider.GetRequiredService<IostDbContext>();
+            var supplyDetails = await context.SupplyDetails
                 .Where(sd => sd.Supply_id == supplyId)
                 .ToListAsync();
 
             if (supplyDetails.Any())
             {
-                _context.SupplyDetails.RemoveRange(supplyDetails);
-                await _context.SaveChangesAsync();
+                context.SupplyDetails.RemoveRange(supplyDetails);
+                await context.SaveChangesAsync();
             }
         }
     }
