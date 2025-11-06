@@ -160,10 +160,11 @@
             txtPass.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtPass.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPass.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtPass.ForeColor = Color.Transparent;
+            txtPass.ForeColor = Color.Black;
             txtPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtPass.Location = new Point(346, 139);
             txtPass.Name = "txtPass";
+            txtPass.PasswordChar = '*';
             txtPass.PlaceholderText = "Password";
             txtPass.SelectedText = "";
             txtPass.ShadowDecoration.CustomizableEdges = customizableEdges7;
@@ -182,7 +183,7 @@
             txtUser.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtUser.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUser.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtUser.ForeColor = Color.Transparent;
+            txtUser.ForeColor = Color.Black;
             txtUser.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtUser.Location = new Point(346, 95);
             txtUser.Name = "txtUser";

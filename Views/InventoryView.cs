@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using projectIost.Models;
+using projectIost.Services;
+using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using projectIost.Services;
-using projectIost.Models;
 
 namespace projectIost.Views
 {
@@ -20,7 +21,7 @@ namespace projectIost.Views
         public InventoryView()
         {
             InitializeComponent();
-
+            
             txtID.ReadOnly = true;
 
             dgvInventory.DataSource = _bindingSource;
@@ -191,6 +192,7 @@ namespace projectIost.Views
                 dgvInventory.Columns.Clear();
                 _bindingSource.DataSource = new BindingList<Item>(items);
                 dgvInventory.DataSource = _bindingSource;
+                dgvInventory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {
@@ -251,37 +253,39 @@ namespace projectIost.Views
             Application.Exit();
         }
 
+        /*
         private void btnSupply_Click(object sender, EventArgs e)
         {
             if (_supplyView == null || _supplyView.IsDisposed)
             {
-                _supplyView = new SupplyView();
+                _supplyView = Program.ServiceProvider.GetRequiredService<SupplyView>();
             }
-            this.Hide();
             _supplyView.Show();
             _supplyView.BringToFront();
+            this.Dispose();
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             if (_orderView == null || _orderView.IsDisposed)
             {
-                _orderView = new OrderView();
+                _orderView = Program.ServiceProvider.GetRequiredService<OrderView>();
             }
-            this.Hide();
-            _orderView.ShowDialog();
+            _orderView.Show();
             _orderView.BringToFront();
+            this.Dispose();
         }
 
         private void btnAnalytics_Click(object sender, EventArgs e)
         {
             if (_analyticsView == null || _analyticsView.IsDisposed)
             {
-                _analyticsView = new AnalyticsView();
+                _analyticsView = Program.ServiceProvider.GetRequiredService<AnalyticsView>();
             }
-            this.Hide();
-            _analyticsView.ShowDialog();
+            
+            _analyticsView.Show();
             _analyticsView.BringToFront();
+            this.Dispose();
         }
 
         private void btnLogout2_Click(object sender, EventArgs e)
@@ -290,9 +294,38 @@ namespace projectIost.Views
             {
                 _loginView = new LoginView(_service);
             }
-            this.Hide();
+            
             _loginView.ShowDialog();
             _loginView.BringToFront();
+            this.Dispose();
+        }
+        */
+
+        private void NavigateTo<T>() where T : Form
+        {
+            var form = Program.ServiceProvider.GetRequiredService<T>();
+            form.Show();
+            this.Hide();
+        }
+
+        private void btnSupply_Click(object sender, EventArgs e)
+        {
+            NavigateTo<SupplyView>();
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            NavigateTo<OrderView>();
+        }
+
+        private void btnAnalytics_Click(object sender, EventArgs e)
+        {
+            NavigateTo<AnalyticsView>();
+        }
+
+        private void btnLogout2_Click(object sender, EventArgs e)
+        {
+            NavigateTo<LoginView>();
         }
     }
 }

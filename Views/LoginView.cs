@@ -40,10 +40,11 @@ namespace projectIost.Views
                 {
                     _inventoryView = Program.ServiceProvider.GetRequiredService<InventoryView>();
                 }
-
+                Console.WriteLine("DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG DEBUGDEBUGDEBUG");
                 this.Hide();
                 _inventoryView.Show();
                 _inventoryView.BringToFront();
+                
             }
             else
             {
