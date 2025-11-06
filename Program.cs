@@ -49,6 +49,11 @@ namespace projectIost
 
             builder.Services.AddScoped<AnalyticsView>();
 
+            builder.Services.AddDbContext<IostDbContext>(options =>
+             options.UseMySql(conn, ServerVersion.AutoDetect(conn)),
+            ServiceLifetime.Scoped); 
+
+            builder.Services.AddScoped<IIostService, IostService>();
 
             var host = builder.Build();
             ServiceProvider = host.Services;

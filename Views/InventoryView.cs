@@ -33,7 +33,14 @@ namespace projectIost.Views
 
         public InventoryView(IIostService service) : this()
         {
-            _service = service ?? throw new ArgumentNullException(nameof(service));
+            _service = service;
+            txtID.ReadOnly = true;
+
+            dgvInventory.DataSource = _bindingSource;
+            dgvInventory.AllowUserToAddRows = false;
+
+            dgvInventory.SelectionChanged += dgvInventory_SelectionChanged;
+            dgvInventory.CellDoubleClick += dgvInventory_CellDoubleClick;
         }
 
         private async void btnAdd_Click(object? sender, EventArgs e)
@@ -46,7 +53,7 @@ namespace projectIost.Views
             }
 
             var name = txtName.Text.Trim();
-            var sku = txtSKU.Text.Trim();   // ✅ FIXED
+            var sku = txtSKU.Text.Trim();   
 
             if (string.IsNullOrWhiteSpace(name))
             {
@@ -97,7 +104,7 @@ namespace projectIost.Views
             }
 
             var name = txtName.Text.Trim();
-            var sku = txtSKU.Text.Trim();   // ✅ FIXED
+            var sku = txtSKU.Text.Trim();   
 
             if (string.IsNullOrWhiteSpace(name))
             {
