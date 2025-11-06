@@ -102,7 +102,7 @@
             txtCUser.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtCUser.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCUser.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtCUser.ForeColor = Color.Transparent;
+            txtCUser.ForeColor = Color.Black;
             txtCUser.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCUser.Location = new Point(74, 174);
             txtCUser.Name = "txtCUser";
@@ -124,7 +124,7 @@
             txtCPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
             txtCPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCPassword.Font = new Font("Century Gothic", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            txtCPassword.ForeColor = Color.Transparent;
+            txtCPassword.ForeColor = Color.Black;
             txtCPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtCPassword.Location = new Point(74, 230);
             txtCPassword.Name = "txtCPassword";

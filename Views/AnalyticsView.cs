@@ -1,4 +1,5 @@
-﻿using projectIost.Services;
+﻿using Microsoft.Extensions.DependencyInjection;
+using projectIost.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,10 +34,10 @@ namespace projectIost.Views
         {
             if (_inventoryView == null || _inventoryView.IsDisposed)
             {
-                _inventoryView = new InventoryView();
+                _inventoryView = Program.ServiceProvider.GetRequiredService<InventoryView>();
             }
             this.Hide();
-            _inventoryView.ShowDialog();
+            _inventoryView.Show();
             _inventoryView.BringToFront();
         }
 
@@ -44,7 +45,7 @@ namespace projectIost.Views
         {
             if (_supplyView == null || _supplyView.IsDisposed)
             {
-                _supplyView = new SupplyView();
+                _supplyView = Program.ServiceProvider.GetRequiredService<SupplyView>();
             }
             this.Hide();
             _supplyView.Show();
@@ -55,10 +56,10 @@ namespace projectIost.Views
         {
             if (_orderView == null || _orderView.IsDisposed)
             {
-                _orderView = new OrderView();
+                _orderView = Program.ServiceProvider.GetRequiredService<OrderView>();
             }
             this.Hide();
-            _orderView.ShowDialog();
+            _orderView.Show();
             _orderView.BringToFront();
         }
 

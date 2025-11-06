@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using projectIost.Models;
+using projectIost.Services;
+using System;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using projectIost.Services;
-using projectIost.Models;
 
 namespace projectIost.Views
 {
@@ -255,7 +256,7 @@ namespace projectIost.Views
         {
             if (_supplyView == null || _supplyView.IsDisposed)
             {
-                _supplyView = new SupplyView();
+                _supplyView = Program.ServiceProvider.GetRequiredService<SupplyView>();
             }
             this.Hide();
             _supplyView.Show();
@@ -266,10 +267,10 @@ namespace projectIost.Views
         {
             if (_orderView == null || _orderView.IsDisposed)
             {
-                _orderView = new OrderView();
+                _orderView = Program.ServiceProvider.GetRequiredService<OrderView>();
             }
             this.Hide();
-            _orderView.ShowDialog();
+            _orderView.Show();
             _orderView.BringToFront();
         }
 
@@ -277,10 +278,10 @@ namespace projectIost.Views
         {
             if (_analyticsView == null || _analyticsView.IsDisposed)
             {
-                _analyticsView = new AnalyticsView();
+                _analyticsView = Program.ServiceProvider.GetRequiredService<AnalyticsView>();
             }
             this.Hide();
-            _analyticsView.ShowDialog();
+            _analyticsView.Show();
             _analyticsView.BringToFront();
         }
 
